@@ -95,6 +95,20 @@
           </div>
         </div>
 
+        <div class="grid_4">
+          <div class="gall_block">
+            <div class="maxheight">
+              <a href="images/bbig3.jpg" class="gall_item"><img src="images/page2_img3.jpg" alt=""></a>
+              <div class="gall_bot">
+                <div class="text1"><a href="#">Lorem Ipsum </a></div>
+                tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse
+                <br>
+                <a href="#" class="btn">more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
     </div>
