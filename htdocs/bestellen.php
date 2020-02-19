@@ -35,9 +35,9 @@
             <div class="navigation ">
               <nav>
                 <ul class="sf-menu">
-                <li class="current"><a href="index.php">HOME</a></li>
+                <li><a href="index.php">HOME</a></li>
                   
-                  <li><a href="bestellen.php">BESTELLEN</a></li>
+                <li class="current"><a href="bestellen.php">BESTELLEN</a></li>
                   <li><a href="login.php">LOGIN</a></li>
                 </ul>
               </nav>

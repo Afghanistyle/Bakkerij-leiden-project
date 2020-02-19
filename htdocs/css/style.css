@@ -169,8 +169,8 @@ a:hover {
 
 .btn:hover {
   color: #fff;
-  border-color: #673ab7;
-  background-color: #e91e63;
+  border-color: #000000;
+  background-color: #e54160;
 }
 
 .link1 {
@@ -278,6 +278,10 @@ a:hover {
 
 /*header*/
 
+.slashes {
+  float: left;
+}
+
 header {
   display: block;
   position: relative;
@@ -311,7 +315,7 @@ header h1 a img {
 /*Content*/
 
 .content {
-  padding-bottom: 114px;
+  padding-bottom: 139px;
   /* background-color: #e54160; */
   background: linear-gradient(#e54160, #3a0f49);
 }
@@ -328,237 +332,11 @@ header h1 a img {
   padding-bottom: 44px;
 }
 
-/*Blocks*/
-
-.banner {
-  padding-top: 49px;
-}
-
-.bn__1 {
-  background-color: #86cdd7 !important;
-}
-
-.bn__2 {
-  background-color: #ffe5b9 !important;
-}
-
-.bann_capt {
-  background-color: #aad4b3;
-  color: #fff;
-  padding-bottom: 22px;
-  text-align: center;
-  font: bold 36px/48px "Economica", sans-serif;
-}
-
-.bann_title {
-  padding: 6px 0 18px;
-  width: 194px;
-  margin: 0 auto 2px;
-  background: url(../images/bann_sep.png) 0 bottom repeat-x;
-}
-
-.bann_capt a {
-  font-size: 20px;
-}
-
-.bann_capt a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.block1 .count {
-  width: 119px;
-  margin: 0 auto;
-  height: 119px;
-  text-align: center;
-  font: 40px/116px "Dosis", sans-serif;
-  border-radius: 500px;
-  border: 1px solid #939393;
-  margin-bottom: 25px;
-}
-
-.block1 {
-  text-align: center;
-  padding: 49px 0;
-}
-
-.box {
-  padding-bottom: 49px;
-  background-color: #f1f0f1;
-}
-
-.box .btn {
-  margin-top: 30px;
-}
-
-.box h2 {
-  padding-top: 38px;
-  margin-bottom: 16px;
-}
-
-.box strong.color1 {
-  font-weight: 600;
-}
-
-.bq1 {
-  background: url(../images/quotes.png) right 0 no-repeat;
-  margin-top: -37px;
-  padding-top: 12px;
-  overflow: hidden;
-}
-
-.bq1 a {
-  margin-top: 3px;
-  float: right;
-  display: block;
-  font: bold 20px/48px "Economica", sans-serif;
-}
-
-.bq1 a .fa {
-  margin-right: 6px;
-  position: relative;
-  top: 1px;
-  font-size: 18px;
-  line-height: 48px;
-}
-
-.bq1 .fleft {
-  margin-top: 5px;
-  margin-right: 19px;
-}
-
-.bq_title {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-  margin-bottom: 12px;
-}
-
-.block2 {
-  margin-top: -22px;
-  overflow: hidden;
-}
-
-.block2 + .block2 {
-  margin-top: 26px;
-}
-
-.block2 time {
-  display: block;
-  background-color: #000;
-  text-align: center;
-  width: 70px;
-  float: left;
-  margin-right: 30px;
-  color: #fff;
-  position: relative;
-  top: 3px;
-  padding: 15px 0 19px;
-  font: bold 24px/30px "Economica", sans-serif;
-}
-
-.form_title {
-  font-size: 16px;
-  position: relative;
-  top: -1px;
-  font-weight: normal;
-}
-
-.blog {
-  margin-right: -1px;
-  padding-top: 45px;
-}
-
-.blog + .blog {
-  padding-top: 40px;
-}
-
-.blog img {
-  border: 1px solid #f2f1f2;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-bottom: 21px;
-}
-
-.blog_title {
-  margin-bottom: 17px;
-  color: #535151;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: normal;
-}
-
-.blog .btn {
-  margin-top: 30px;
-}
-
-.blog table {
-  border-top: 1px solid #d9d9d9;
-  width: 100%;
-  line-height: 40px;
-  position: relative;
-  top: 2px;
-}
-
-.blog table tr {
-  border-bottom: 1px solid #d9d9d9;
-}
-
-.blog table .fa {
-  font-size: 20px;
-  color: #adacac;
-  min-width: 24px;
-  margin-right: 27px;
-  line-height: 40px;
-}
-
-.blog table td + td .fa {
-  margin-right: 5px;
-}
-
-.blog table td:first-child {
-  width: 238px;
-}
-
-.blog table td + td + td {
-  text-align: right;
-}
-
-.block3 {
-  overflow: hidden;
-  margin-top: -2px;
-}
-
-.block3 + .block3 {
-  margin-top: 37px;
-}
-
-.block3 + .block3 + .block3 {
-  margin-top: 42px;
-}
-
-.block3 .fleft {
-  margin-top: 5px;
-  margin-right: 20px;
-}
-
-.block3 .text1 {
-  margin-bottom: 22px;
-  font-weight: normal;
-  line-height: 24px;
-}
-
-.block3 .text1 time {
-  display: block;
-}
-
 /*Gallery*/
 
 .gall_item {
   display: block;
-  background: #e91e63 url(../images/magnify.png) center center no-repeat;
+  background: #e54160 url(../images/magnify.png) center center no-repeat;
 }
 
 .gall_item img {
@@ -589,9 +367,7 @@ header h1 a img {
 
 .gall_bot .text1 {
   margin-bottom: 22px;
-}
-
-/*Separators*/
+} /*Separators*/
 
 .sep__1 {
   height: 29px;
@@ -627,11 +403,14 @@ header h1 a img {
 /*Footer */
 
 #footer {
-  display: block;
-  padding: 50px 0 40px;
-  color: #e2e2e2;
-  font-size: 14px;
-  line-height: 18px;
+  position: sticky;
+  min-height: 131px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1e1e1e !important;
+  border-top: 2px solid #db3e5e;
+  padding: 30px 0 0 0;
 }
 
 .copyright {
@@ -663,12 +442,12 @@ header h1 a img {
 
 .socials .fab {
   background-color: #3a0f49;
-  font-size: 25px;
-  float: left;
+  font-size: 35px;
+  /* float: left; */
   line-height: 50px;
   width: 50px;
   height: 50px;
-  border-radius: 500px;
+  /* border-radius: 500px; */
   text-align: center;
 }
 
@@ -683,29 +462,6 @@ header h1 a img {
 
 .socials .fa.fa-pinterest {
   font-size: 30px;
-}
-
-#toTop {
-  display: none;
-  text-decoration: none;
-  position: fixed;
-  bottom: 40px;
-  left: 51%;
-  margin-left: 640px;
-  overflow: hidden;
-  width: 43px;
-  height: 28px;
-  border: none;
-  text-indent: -999px;
-  z-index: 20;
-  background: url(../images/totop.png) no-repeat left 0;
-  transition: 0s ease;
-  -o-transition: 0s ease;
-  -webkit-transition: 0s ease;
-}
-#toTop:hover {
-  outline: none;
-  background-position: right 0;
 }
 
 /* Responsive Layout */
