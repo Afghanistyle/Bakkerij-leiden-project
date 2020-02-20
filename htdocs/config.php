@@ -1,10 +1,19 @@
 <?php
 
-define( 'DB_serverID', 'localhost' ); 
-define( 'DB_USER', 'root' ); 
-define( 'DB_PASS', 'redberry5' ); 
-define( 'DB_NAME', 'multi_login' ); 
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define('DB_NAME', 'd');
+/** MySQL database username */
+define('DB_USER', '');
+/** MySQL database password */
+define('DB_PASSWORD', '');
+/** MySQL hostname */
+define('DB_HOST', 'localhost');
 
-define("SRV_NAME", "BakkerijLeiden "); 
+/** Title */
+define('SRV_NAME')
+
+
+
 
 ?>
