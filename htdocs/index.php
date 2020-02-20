@@ -18,7 +18,7 @@
   <script src="js/jquery.mobilemenu.js"></script>
   <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/jquery.ui.totop.js"></script>
-  <!-- https://fontawesome.com/ -->
+  <!-- Kit awesome for icons-->
   <script src="https://kit.fontawesome.com/ba6de2795c.js" crossorigin="anonymous"></script>
  
 </head>
@@ -34,7 +34,11 @@
             <h1>
               <a href="index.html">
                 <img src="images/logo.png" alt="Logo alt">
-                <a href="http://home.com" id="logo">Your logo name</a>
+                    <style>
+                         background-image: url("paper.gif");
+
+                    </style>
+                <!-- <img src="images/slashes.png" alt="Cinque Terre" width="200" height="200"> -->
               </a>
             </h1>
             
@@ -56,9 +60,7 @@
       </div>
     </section>
   </header>
-
   
-
   <!-- content -->
   <section class="content gallery pad1">
     <div class="container">
