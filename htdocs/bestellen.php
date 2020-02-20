@@ -121,16 +121,6 @@
     </div>
   </footer>
 
-  <!-- <script>
-    $(document).ready(function () {
-
-      $().UItoTop({ easingType: 'easeOutQuart' });
-      $('#stuck_container').tmStickUp({});
-      $('.gallery .gall_item').touchTouch();
-
-    }); 
-  </script> -->
-
 </body>
 
 </html>
