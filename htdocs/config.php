@@ -1,16 +1,10 @@
 <?php
 
-// MySQL settings 
-/** The name of the database for WordPress */
-define('DB_NAME', 'localhost');
-/** MySQL database username */
-define('DB_USER', 'root');
-/** MySQL database password */
-define('DB_PASSWORD', '');
-/** MySQL hostname */
-define('DB_HOST', 'bakkerij');
+define( 'DB_serverID', 'localhost' ); 
+define( 'DB_USER', 'root' ); 
+define( 'DB_PASS', 'redberry5' ); 
+define( 'DB_NAME', 'multi_login' ); 
 
-/** Title */
-define('SRV_NAME', 'BakkerijLeiden');
+define("SRV_NAME", "BakkerijLeiden "); 
 
 ?>
