@@ -23,7 +23,7 @@
   <!-- header -->
   <header>
     <!-- menu -->
-    <section id="stuck_container">
+    <!-- <section id="stuck_container"> -->
       <div class="container">
         <div class="row">
           <div class="grid_12">
@@ -46,56 +46,15 @@
           </div>
         </div>
       </div>
-    </section>
+    <!-- </section> -->
   </header>
 
   <!-- content -->
   <section class="content gallery pad1">
-    <div class="container">
-      <div class="row">
-        <div class="grid_4">
-          <div class="gall_block">
-            <div class="maxheight">
-              <a href="images/bbig1.jpg" class="gall_item"><img src="images/page2_img1.jpg" alt=""></a>
-              <div class="gall_bot">
-                <div class="text1"><a href="#">Lorem Ipsum</a></div>
-                tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse
-                <br>
-                <a href="#" class="btn"><i class="fas-fa-shopping-cart"></i>Bestel</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid_4">
-          <div class="gall_block">
-            <div class="maxheight">
-              <a href="images/big3.jpg" class="gall_item"><img src="images/page2_img2.jpg" alt=""></a>
-              <div class="gall_bot">
-                <div class="text1"><a href="#">Lorem Ipsum </a></div>
-                tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse
-                <br>
-                <a href="#" class="btn">more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid_4">
-          <div class="gall_block">
-            <div class="maxheight">
-              <a href="images/bbig3.jpg" class="gall_item"><img src="images/page2_img3.jpg" alt=""></a>
-              <div class="gall_bot">
-                <div class="text1"><a href="#">Lorem Ipsum </a></div>
-                tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse
-                <br>
-                <a href="#" class="btn">more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    </div>
+    
+     
+    <div class="bestellen"></div>
+    
   </section>
   <!-- footer -->
   <footer id="footer">
@@ -103,15 +62,16 @@
       <div class="row">
         <div class="grid_12">
           <div class="socials">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-youtube"></a>
-            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-youtube"></a>
+            <a href="#" class="fab fa-linkedin"></a>
 
           </div>
           <div class="copyright"><span class="brand">BakkerijLeiden </span> &copy; <span id="copyright-year"></span> |
-            <a href="#">Privacy Policy</a>
+            <!-- <a href="#">Privacy Policy</a> --> Alle handelsmerken en logo's zijn eigendom van hun respectieve eigenaars.
+
             <div>Website designed by <a href="http://www.mborijnland.nl" rel="nofollow">Martijn, Aron, Abulbari,
                 Bilal</a>
             </div>
@@ -123,4 +83,5 @@
 
 </body>
 
+</html>
 </html>
