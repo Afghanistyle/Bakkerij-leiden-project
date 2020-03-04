@@ -63,3 +63,16 @@ body {
 #shady {
  background-image: linear-gradient(#3a0f49, #e54160cf);
 }
+
+#login {
+    width: 50%;
+    margin-left: 199px;
+    border-left: solid
+    #3a0f49 1px;
+}
+
+#terug {
+    width: 50%;
+    margin-right: 200px;
+    margin-top: -71px;
+}

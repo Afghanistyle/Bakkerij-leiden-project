@@ -18,7 +18,8 @@
 					<i class="fas fa-lock"></i>
 				</label>
 				<input type="password" name="password" placeholder="Password" id="password" required>
-				<input type="submit" value="Login">
+        <div id="login"><input type="submit" value="Login"></div>
+        <div id="terug"><input type="submit" value="Terug"></div>
 			</form>
 		</div>
 	</body>
