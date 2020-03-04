@@ -238,9 +238,7 @@ table {
   margin-left: 130px;
 }
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  *zoom: 1;
+  margin: auto;
 }
 .container:before,
 .container:after {
