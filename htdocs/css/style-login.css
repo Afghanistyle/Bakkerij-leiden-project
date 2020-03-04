@@ -53,11 +53,12 @@ body {
     cursor: pointer;
     font-weight: bold;
     color: #ffffff;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease;
 }
 .login form input[type="submit"]:hover {
-  background-color: #e54160cf;
-    transition: background-color 0.2s;
+  background-color: #c02340cf;
+    transition: all 0.5s ease;
+    /* border-bottom: solid 1px #3a0f49; */
 }
 
 #shady {
@@ -67,12 +68,24 @@ body {
 #login {
     width: 50%;
     margin-left: 199px;
-    border-left: solid
-    #3a0f49 1px;
+    border-left: solid #3a0f49 1px;
 }
 
 #terug {
     width: 50%;
+    padding: 15px;
+    margin-top: -51px;
+    background-color: #e54160cf;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
     margin-right: 200px;
-    margin-top: -71px;
+    text-align: center;
+}
+
+#terug:hover {
+    background-color: #c02340cf;
+    transition: all 0.5s ease;
+    /* border-bottom: solid 1px #3a0f49; */
 }

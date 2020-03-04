@@ -12,35 +12,35 @@ if ( mysqli_connect_errno() ) {
 	die ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-    if ( !isset($_POST['gebruikersnaam'], $_POST['wachtwoord']) ) {
+    if ( !isset($_POST['username'], $_POST['password']) ) {
     
         die ('not good my friend');
     }
 
     
-if ($stmt = $con->prepare('SELECT id, wachtwoord FROM gebruikers WHERE gebruikersnaam = ?')) {
+if ($stmt = $con->prepare('SELECT id, password FROM gebruikers WHERE username = ?')) {
 	
-	$stmt->bind_param('s', $_POST['gebruikersnaam']);
+	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
 
     $stmt->store_result();
     
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $wachtwoord);
+        $stmt->bind_result($id, $password);
         $stmt->fetch();
        
-        if (password_verify($_POST['wachtwoord'], $wachtwoord)) {
+        if (password_verify($_POST['password'], $password)) {
           
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
-            $_SESSION['name'] = $_POST['gebruikersnaam'];
+            $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
             echo 'Welkom ' . $_SESSION['name'] . '!';
         } else {
-            echo 'Onjuiste Wachtwoord!';
+            echo 'Onjuiste password!';
         }
     } else {
-        echo 'Onjuiste Gebruikersnaam!';
+        echo 'Onjuiste username!';
     }
 
 	$stmt->close();

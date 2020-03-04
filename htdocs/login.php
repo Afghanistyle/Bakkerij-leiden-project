@@ -10,16 +10,16 @@
       <div id="shady"></div>
 			<h1>Login</h1>
 			<form action="database.php" method="post">
-				<label for="gebruikersnaam">
+				<label for="username">
 					<i class="fas fa-user"></i>
 				</label>
-				<input type="text" name="gebruikersnaam" placeholder="gebruikersnaam" id="gebruikersnaam" required>
-				<label for="wachtwoord">
+				<input type="text" name="username" placeholder="username" id="username" required>
+				<label for="password">
 					<i class="fas fa-lock"></i>
 				</label>
-				<input type="password" name="wachtwoord" placeholder="wachtwoord" id="wachtwoord" required>
+				<input type="password" name="password" placeholder="password" id="password" required>
         <div id="login"><input type="submit" value="Login"></div>
-        <div id="terug"><input type="submit" value="Terug"></div>
+        <div id="terug" href="index.php"> Terug</div>
 			</form>
 		</div>
 	</body>
