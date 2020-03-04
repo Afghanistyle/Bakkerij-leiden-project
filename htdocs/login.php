@@ -9,15 +9,15 @@
 		<div class="login">
       <div id="shady"></div>
 			<h1>Login</h1>
-			<form action="authenticate.php" method="post">
-				<label for="username">
+			<form action="database.php" method="post">
+				<label for="gebruikersnaam">
 					<i class="fas fa-user"></i>
 				</label>
-				<input type="text" name="username" placeholder="Username" id="username" required>
-				<label for="password">
+				<input type="text" name="gebruikersnaam" placeholder="gebruikersnaam" id="gebruikersnaam" required>
+				<label for="wachtwoord">
 					<i class="fas fa-lock"></i>
 				</label>
-				<input type="password" name="password" placeholder="Password" id="password" required>
+				<input type="password" name="wachtwoord" placeholder="wachtwoord" id="wachtwoord" required>
         <div id="login"><input type="submit" value="Login"></div>
         <div id="terug"><input type="submit" value="Terug"></div>
 			</form>
