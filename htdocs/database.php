@@ -14,7 +14,7 @@ if ( mysqli_connect_errno() ) {
 
     if ( !isset($_POST['username'], $_POST['password']) ) {
     
-        die ('not good my friend');
+        header('location: login.php');
     }
 
     
@@ -35,7 +35,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM gebruikers WHERE username = 
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            echo 'Welkom ' . $_SESSION['name'] . '!';
+            
         } else {
             echo 'Onjuiste password!';
         }
