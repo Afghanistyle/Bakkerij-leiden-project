@@ -1,81 +1,135 @@
-/**
- * jQuery Mobile Menu 
- * Turn unordered list menu into dropdown select menu
- * version 1.1(27-JULY-2013)
- * 
- * Built on top of the jQuery library
- *   http://jquery.com
- * 
- * Documentation
- *   http://github.com/mambows/mobilemenu
- */
-(function($){
-$.fn.mobileMenu = function(options) {
-  
-  var defaults = {
-      defaultText: 'Navigate to...',
-      className: 'select-menu',
-      subMenuClass: 'sub-menu',
-      subMenuDash: '&ndash;'
-    },
-    settings = $.extend( defaults, options ),
-    el = $(this);
-  
-  this.each(function(){
-    var $el = $(this),
-      $select_menu;
+// credits http://cssmenumaker.com/menu/flat-jquery-responsive-menu
 
-    // ad class to submenu list
-    $el.find('ul').addClass(settings.subMenuClass);
+(function($) {
+  $.fn.menumaker = function(options) {
+    var cssmenu = $(this),
+      settings = $.extend(
+        {
+          title: "Menu",
+          format: "dropdown",
+          sticky: false
+        },
+        options
+      );
 
-    // Create base menu
-    var $select_menu = $('<select />',{
-      'class' : settings.className + ' ' + el.get(0).className
-    }).insertAfter( $el );
+    return this.each(function() {
+      cssmenu.prepend('<div id="menu-button">' + settings.title + "</div>");
+      $(this)
+        .find("#menu-button")
+        .on("click", function() {
+          $(this).toggleClass("menu-opened");
+          var mainmenu = $(this).next("ul");
+          if (mainmenu.hasClass("open")) {
+            mainmenu.hide().removeClass("open");
+          } else {
+            mainmenu.show().addClass("open");
+            if (settings.format === "dropdown") {
+              mainmenu.find("ul").show();
+            }
+          }
+        });
 
-    // Create default option
-    $('<option />', {
-      "value"   : '#',
-      "text"    : settings.defaultText
-    }).appendTo( $select_menu );
+      cssmenu
+        .find("li ul")
+        .parent()
+        .addClass("has-sub");
 
-    // Create select option from menu
-    $el.find('a').each(function(){
-      var $this   = $(this),
-        optText = '&nbsp;' + $this.text(),
-        optSub  = $this.parents( '.' + settings.subMenuClass ),
-        len   = optSub.length,
-        dash;
-      
-      // if menu has sub menu
-      if( $this.parents('ul').hasClass( settings.subMenuClass ) ) {
-        dash = Array( len+1 ).join( settings.subMenuDash );
-        optText = dash + optText;
+      multiTg = function() {
+        cssmenu
+          .find(".has-sub")
+          .prepend('<span class="submenu-button"></span>');
+        cssmenu.find(".submenu-button").on("click", function() {
+          $(this).toggleClass("submenu-opened");
+          if (
+            $(this)
+              .siblings("ul")
+              .hasClass("open")
+          ) {
+            $(this)
+              .siblings("ul")
+              .removeClass("open")
+              .hide();
+          } else {
+            $(this)
+              .siblings("ul")
+              .addClass("open")
+              .show();
+          }
+        });
+      };
+
+      if (settings.format === "multitoggle") multiTg();
+      else cssmenu.addClass("dropdown");
+
+      if (settings.sticky === true) cssmenu.css("position", "fixed");
+
+      resizeFix = function() {
+        if ($(window).width() > 768) {
+          cssmenu.find("ul").show();
+        }
+
+        if ($(window).width() <= 768) {
+          cssmenu
+            .find("ul")
+            .hide()
+            .removeClass("open");
+        }
+      };
+      resizeFix();
+      return $(window).on("resize", resizeFix);
+    });
+  };
+})(jQuery);
+
+(function($) {
+  $(document).ready(function() {
+    $(document).ready(function() {
+      $("#cssmenu").menumaker({
+        title: "Menu",
+        format: "multitoggle"
+      });
+
+      $("#cssmenu").prepend("<div id='menu-line'></div>");
+
+      var foundActive = false,
+        activeElement,
+        linePosition = 0,
+        menuLine = $("#cssmenu #menu-line"),
+        lineWidth,
+        defaultPosition,
+        defaultWidth;
+
+      $("#cssmenu > ul > li").each(function() {
+        if ($(this).hasClass("active")) {
+          activeElement = $(this);
+          foundActive = true;
+        }
+      });
+
+      if (foundActive === false) {
+        activeElement = $("#cssmenu > ul > li").first();
       }
 
-      // Now build menu and append it
-      $('<option />', {
-        "value" : this.href,
-        "html"  : optText,
-        "selected" : (this.href == window.location.href)
-      }).appendTo( $select_menu );
+      defaultWidth = lineWidth = activeElement.width();
 
-    }); // End el.find('a').each
+      defaultPosition = linePosition = activeElement.position().left;
 
-    // Change event on select element
-    $select_menu.change(function(){
-      var locations = $(this).val();
-      if( locations !== '#' ) {
-        window.location.href = $(this).val();
-      };
+      menuLine.css("width", lineWidth);
+      menuLine.css("left", linePosition);
+
+      $("#cssmenu > ul > li").hover(
+        function() {
+          activeElement = $(this);
+          lineWidth = activeElement.width();
+          linePosition = activeElement.position().left;
+          menuLine.css("width", lineWidth);
+          menuLine.css("left", linePosition);
+        },
+        function() {
+          menuLine.css("left", defaultPosition);
+          menuLine.css("width", defaultWidth);
+        }
+      );
     });
-    $('.select-menu').show();
-  }); // End this.each
-
-  return this;
-
-};
+  });
 })(jQuery);
-$(document).ready(function(){
-	$('.sf-menu').mobileMenu();
-});

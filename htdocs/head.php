@@ -3,7 +3,11 @@
 
 <head>
   <title><?php echo SRV_NAME; ?></title>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no" />
   <!-- Favicons -->
   <link rel="icon" href="images/favicon.ico">
