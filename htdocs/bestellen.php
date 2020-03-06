@@ -390,6 +390,9 @@ aside {
             <ul></ul>
           </div>
         </header>
+
+        <section class="content gallery pad1">
+        </section>
   <!-- <main>
     <div class="basket">
       <div class="basket-module">

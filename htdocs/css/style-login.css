@@ -4,18 +4,20 @@
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    padding: 0;
 }
-body {
+
+
+/* body {
     background-color: #435165;
-}
+} */
+
 .login {
     width: 400px;
     background-color: #3a0f49;
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
     margin: 305px auto;
 }
+
 .login h1 {
     text-align: center;
     color: #5b6574;
@@ -23,6 +25,7 @@ body {
     padding: 20px 0 20px 0;
     border-bottom: 1px solid #e54160cf;
 }
+
 .login form {
     display: flex;
     flex-wrap: wrap;
@@ -30,6 +33,7 @@ body {
     padding-top: 20px;
     background-color: #3a0f49;
 }
+
 .login form label {
     display: flex;
     justify-content: center;
@@ -39,32 +43,35 @@ body {
     background-color: #e54160cf;
     color: #ffffff;
 }
-.login form input[type="password"], .login form input[type="text"] {
+
+.login form input[type="password"],
+.login form input[type="text"] {
     width: 310px;
     height: 50px;
     border: 1px solid #dee0e4;
     margin-bottom: 20px;
     padding: 0 15px;
 }
+
 .login form input[type="submit"] {
     width: 100%;
     padding: 15px;
-   margin-top: 20px;
+    margin-top: 20px;
     background-color: #e54160cf;
     border: 0;
     cursor: pointer;
     font-weight: bold;
     color: #ffffff;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s;
 }
+
 .login form input[type="submit"]:hover {
-  background-color: #c02340cf;
-    transition: all 0.5s ease;
-    /* border-bottom: solid 1px #3a0f49; */
+    background-color: #e54160cf;
+    transition: background-color 0.2s;
 }
 
 #shady {
- background-image: linear-gradient(#3a0f49, #e54160cf);
+    background-image: linear-gradient(#3a0f49, #e54160cf);
 }
 
 #login {
@@ -75,13 +82,6 @@ body {
 
 #terug {
     width: 50%;
-    padding: 15px;
-    margin-top: -51px;
-    background-color: #e54160cf;
-    border: 0;
-    cursor: pointer;
-    font-weight: bold;
-    color: #ffffff;
     margin-right: 200px;
     text-align: center;
 }
