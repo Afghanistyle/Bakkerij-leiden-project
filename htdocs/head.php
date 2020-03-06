@@ -13,6 +13,7 @@
   <link rel="icon" href="images/favicon.ico">
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link rel="stylesheet" href="css/style.css?v=1.1">
+  <link href="css/style-login.css" rel="stylesheet" type="text/css">
   <!-- Scripts-->
   <script src="js/jquery.js"></script>
   <script src="js/jquery-migrate-1.1.1.js"></script>
@@ -22,5 +23,6 @@
   <script src="js/jquery.ui.totop.js"></script>
   <!-- https://fontawesome.com/ -->
   <script src="https://kit.fontawesome.com/ba6de2795c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
  
 </head>
