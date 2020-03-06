@@ -1,10 +1,10 @@
 <?php include('config.php'); ?>
 <?php include('head.php');?>
 
-<body>
+<body onload="zoom()">
 <!-- header -->
 <header>
-<img src="images/stripes.png" class="stripes" alt="Logo alt">
+
 <!-- menu -->
 <div class="container">
   <div class="row">
@@ -13,11 +13,12 @@
         <a href="index.php">
           <img src="images/logo.png" alt="Logo alt">
           
+
           </a>
         </h1>
-        
+        <img src="images/stripes.png" class="stripes" alt="Logo alt">
         <div id='cssmenu'>
-        <div class="stripes"></div>
+        
           <ul>
             <li>
               <a href='index.php'>
@@ -48,7 +49,7 @@
                                     
                         <br>
                           <a href="#" class="btn">
-                            <i class="fas-fa-shopping-cart"></i> In Winkelmand
+                            <i class="fas-fa-shopping-cart"></i> In Winkelmand €5.00
                           </a>
                         </div>
                       </div>
@@ -65,7 +66,7 @@
                                     Hier komt informatie over het product
                                     
                             <br>
-                              <a href="#" class="btn">In Winkelmand</a>
+                              <a href="#" class="btn">In Winkelmand €7.50</a>
                             </div>
                           </div>
                         </div>
@@ -81,7 +82,7 @@
                                     Hier komt informatie over het product
                                     
                                 <br>
-                                  <a href="#" class="btn">In Winkelmand</a>
+                                  <a href="#" class="btn">In Winkelmand €10.00</a>
                                 </div>
                               </div>
                             </div>
@@ -105,5 +106,14 @@
                             </div>
                           </section>
                           <?php include('footer.php');?>
+
+                          <script type="text/javascript">
+                            function zoom() {
+                                document.body.style.zoom = "90%" 
+                            }
+                          </script>
+
                         </body>
                       </html>
+
+

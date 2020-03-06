@@ -6,7 +6,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-
 /* body {
     background-color: #435165;
 } */
@@ -83,17 +82,5 @@
 #terug {
     width: 50%;
     margin-right: 200px;
-    text-align: center;
-}
-
-#terug:hover {
-    background-color: #c02340cf;
-    transition: all 0.5s ease;
-    /* border-bottom: solid 1px #3a0f49; */
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    outline: none;
+    margin-top: -71px;
 }
