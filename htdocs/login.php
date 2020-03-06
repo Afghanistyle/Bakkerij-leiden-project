@@ -19,7 +19,7 @@
 				</label>
 				<input type="password" name="password" placeholder="password" id="password" required>
         <div id="login"><input type="submit" value="Login"></div>
-        <div id="terug" href="index.php"> Terug</div>
+        <div id="terug" > <a href="index.php"> Terug</a> </div>
 			</form>
 		</div>
 	</body>

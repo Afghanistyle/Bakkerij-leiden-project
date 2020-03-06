@@ -91,3 +91,8 @@ body {
     transition: all 0.5s ease;
     /* border-bottom: solid 1px #3a0f49; */
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
