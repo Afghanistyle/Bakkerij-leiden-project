@@ -14,6 +14,7 @@ if (!isset($_SESSION['loggedin'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link href="CSS/styleDB.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="navi">
@@ -31,5 +32,5 @@ if (!isset($_SESSION['loggedin'])) {
 
 
 
-		<!-- <link href="CSS/styleDB.css" rel="stylesheet" type="text/css"> -->
+
        
