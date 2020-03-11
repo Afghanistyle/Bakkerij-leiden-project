@@ -62,7 +62,7 @@ body {
     cursor: pointer;
     font-weight: bold;
     color: #ffffff;
-    transition: background-color 0.2s;
+
 }
 
 .login form input[type="submit"]:hover {
@@ -70,9 +70,9 @@ body {
     transition: background-color 0.2s;
 }
 
-#shady {
+/* #shady {
     background-image: linear-gradient(#3a0f49, #e54160cf);
-}
+} */
 
 #login {
     width: 50%;
@@ -88,10 +88,8 @@ body {
     border: 0;
     cursor: pointer;
     font-weight: bold;
-    color: #ffffff;
-    margin-right: 200px;
+    margin-right: 327px;
     text-align: center;
-}
 }
 
 #terug:hover {

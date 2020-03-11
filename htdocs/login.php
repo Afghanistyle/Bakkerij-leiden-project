@@ -7,7 +7,7 @@
 	</head>
     <!-- login -->
 		<div class="login">
-      <div id="shady"></div>
+      <!-- <div id="shady"></div> -->
 			<h1>Login</h1>
 			<form action="database.php" method="post">
 				<label for="username">
@@ -19,7 +19,7 @@
 				</label>
 				<input type="password" name="password" placeholder="password" id="password" required>
 		<div id="login"><input type="submit" value="Login"></div>
-		<div id="terug" >  <a href="index.php"> Terug</a> </div>
+		<a href="index.php"><div id="terug"> Terug </div></a>
 			</form>
       <!-- end login -->
 		</div>
