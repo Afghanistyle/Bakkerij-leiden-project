@@ -14,7 +14,7 @@ if ( mysqli_connect_errno() ) {
 // Now we check if the data from the login form was submitted, isset() will check if the data exists.
 if ( !isset($_POST['username'], $_POST['password']) ) {
 	// Could not get the data that should have been sent.
-	die ('tumor!');
+	die ('niet werken lan!');
 }
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
@@ -38,10 +38,10 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             $_SESSION['id'] = $id;
             header('location: dashboard.php');
         } else {
-            echo 'Incorrect password!';
+            header('location: pu.php');
         }
     } else {
-        echo 'Incorrect username!';
+        header('location: pu.php');
     }
   
 	$stmt->close();

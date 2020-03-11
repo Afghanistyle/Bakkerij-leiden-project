@@ -18,7 +18,7 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 <body>
     <div id="navi">
-        <div id="logout"></div>
+       <a href="index.php"> <div id="logout"></div> </a>
     </div>
     <p>Welkom, <?=$_SESSION['name']?></p>
 </body>

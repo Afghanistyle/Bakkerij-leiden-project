@@ -1,0 +1,31 @@
+body {
+    background-color: #435165;
+}
+
+#blok {
+    color:#5b6574;
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    position: absolute;
+    right: 794px;
+    bottom: 489px;
+}
+
+#container {
+    width: 400px;
+    background-color:
+    #3a0f49;
+    box-shadow: 0 0 9px 0
+    rgba(0, 0, 0, 0.3);
+    margin: 305px auto;
+    height: 320px;
+}
+
+#onj {
+    color:#5b6574;
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    position: absolute;
+    right: 913px;
+    bottom: 458px;
+}
