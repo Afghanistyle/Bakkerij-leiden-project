@@ -8,8 +8,8 @@
 </head>
 <body>
     <div id="container">
-    <div id="onj"> Incorrect </div>
     <div id="blok">  Gebruikersnaam of Wachtwoord </div>
+    <div id="onj"> Incorrect </div>
 </div>
 </body>
 </html>
