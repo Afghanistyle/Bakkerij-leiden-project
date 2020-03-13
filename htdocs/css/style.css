@@ -10,7 +10,7 @@
 @import url(//fonts.googleapis.com/css?family=Dosis);
 html {
     height: 100%;
-    background: linear-gradient(to top, #3a0f49, #e54160);
+    /* background: linear-gradient(to top, #3a0f49, #e54160); */
     background-size: cover;
 }
 
@@ -29,6 +29,7 @@ a[href^="tel:"] {
 body {
     position: relative;
     color: #969696;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e54160), to(#3a0f49)) fixed;
     font: 300 14px/20px "Open Sans", sans-serif;
 }
 
@@ -56,9 +57,10 @@ h6 {
 
 h2 {
     font-size: 36px;
-    line-height: 48px;
-    padding-top: 38px;
-    margin-bottom: 14px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
 }
 
 .page1 h2 {
@@ -90,6 +92,7 @@ a:hover {
     margin-top: 50px;
     text-align: center;
     position: relative;
+    width: 100%;
     transition: all 0.2s ease-out;
     -webkit-transition: all 0.2s ease-out;
     box-shadow: 0 0 0.1em #3a0f49;
@@ -173,8 +176,7 @@ header h1 a img {
 }
 
 .pad1 {
-    padding-top: 50px;
-    background: linear-gradient(to top, #3a0f49, #e54160);
+    /* padding-top: 50px; */
 }
 
 .ctn__1 {
@@ -287,9 +289,9 @@ header h1 a img {
 
 .stripes {
     position: absolute;
-    right: 25%;
-    height: 148%;
-    margin-top: -46px;
+    height: 173%;
+    margin-top: -54%;
+    right: -235%;
 }
 
 .text1 {
@@ -320,72 +322,41 @@ header h1 a img {
     text-decoration: underline;
 }
 
-.tooltip {
-    display: inline-block;
+table td {
     position: relative;
-    text-align: left;
 }
 
-.tooltip h3 {
-    margin: 12px 0;
-}
-
-.tooltip .right {
-    min-width: 200px;
-    max-width: 400px;
-    top: 50%;
-    left: 100%;
-    margin-left: 20px;
-    transform: translate(0, -50%);
-    padding: 0;
-    color: #eeeeee;
-    background-color: #444444;
-    font-weight: normal;
-    font-size: 13px;
-    border-radius: 8px;
-    position: absolute;
-    z-index: 99999999;
-    box-sizing: border-box;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.8s;
-}
-
-.tooltip:hover .right {
-    visibility: visible;
-    opacity: 1;
-}
-
-.tooltip .right img {
+.tooltip {
     width: 400px;
-    border-radius: 8px 8px 0 0;
-}
-
-.tooltip .text-content {
-    padding: 10px 20px;
-}
-
-.tooltip .right i {
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
     position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -12px;
-    width: 12px;
-    height: 24px;
-    overflow: hidden;
+    top: 5px;
+    left: 50px;
+    display: none;
 }
 
-.tooltip .right i::after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    left: 0;
-    top: 50%;
-    transform: translate(50%, -50%) rotate(-45deg);
-    background-color: #444444;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+.tooltip {
+    z-index: 100;
+}
+
+.link {
+    display: block;
+    width: 9%;
+}
+
+.link:hover+.tooltip {
+    display: block;
+}
+
+.tooltip:hover {
+    display: block;
 }
 
 
@@ -396,7 +367,7 @@ header h1 a img {
         width: 100%;
     }
     .stripes {
-        float: left;
+        display: inline-block;
     }
     .tmSelect.auto,
     .tmSelect2.auto {
