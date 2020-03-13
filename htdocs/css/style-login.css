@@ -6,9 +6,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
 /* body {
     background-color: #435165;
-} */
+}
 
 .login {
     width: 400px;
@@ -65,7 +66,7 @@
 }
 
 .login form input[type="submit"]:hover {
-    background-color: #e54160cf;
+    background-color: #c02340cf;
     transition: background-color 0.2s;
 }
 
@@ -81,6 +82,13 @@
 
 #terug {
     width: 50%;
+    padding: 15px;
+    margin-top: -51px;
+    background-color: #e54160cf;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
     margin-right: 200px;
     margin-top: -71px;
 }
