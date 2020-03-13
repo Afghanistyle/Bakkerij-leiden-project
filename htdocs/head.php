@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title><?php echo SRV_NAME; ?></title>
+  <title>bakkerij-leiden</title>
   <meta charset="UTF-8">
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
