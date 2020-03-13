@@ -7,9 +7,9 @@
 }
 
 
-body {
+/* body {
     background-color: #435165;
-}
+} */
 
 .login {
     width: 400px;
@@ -62,13 +62,13 @@ body {
     cursor: pointer;
     font-weight: bold;
     color: #ffffff;
-
 }
 
 .login form input[type="submit"]:hover {
-    background-color: #c02340cf;
+    background-color: #e54160cf;
     transition: background-color 0.2s;
 }
+
 
 /* #shady {
     background-image: linear-gradient(#3a0f49, #e54160cf);
