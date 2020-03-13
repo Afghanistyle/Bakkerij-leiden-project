@@ -11,15 +11,14 @@ if ( mysqli_connect_errno() ) {
 	
 	die ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
-
-    if ( !isset($_POST['username'], $_POST['password']) ) {
-    
-        die ('not good my friend');
-    }
-
-    
-if ($stmt = $con->prepare('SELECT id, password FROM gebruikers WHERE username = ?')) {
-	
+// Now we check if the data from the login form was submitted, isset() will check if the data exists.
+if ( !isset($_POST['username'], $_POST['password']) ) {
+	// Could not get the data that should have been sent.
+	die ('niet werken lan!');
+}
+// Prepare our SQL, preparing the SQL statement will prevent SQL injection.
+if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
 
@@ -37,10 +36,10 @@ if ($stmt = $con->prepare('SELECT id, password FROM gebruikers WHERE username = 
             $_SESSION['id'] = $id;
             echo 'Welkom ' . $_SESSION['name'] . '!';
         } else {
-            echo 'Onjuiste password!';
+            header('location: pu.php');
         }
     } else {
-        echo 'Onjuiste username!';
+        header('location: pu.php');
     }
 
 	$stmt->close();
