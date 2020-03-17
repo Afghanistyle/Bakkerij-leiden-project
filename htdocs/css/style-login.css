@@ -6,7 +6,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-
 body {
     background-color: #435165;
 }
@@ -68,7 +67,6 @@ body {
     background-color: #c02340cf;
     transition: background-color 0.2s;
 }
-
 
 #login {
     width: 50%;

@@ -1,5 +1,4 @@
-<?php include('database.php');?>
-
+<?php include('database.php'); ?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -7,6 +6,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link href="CSS/style-login.css" rel="stylesheet" type="text/css">
 	</head>
+
+
     <!-- login -->
 		<div class="login">
       <!-- <div id="shady"></div> -->
