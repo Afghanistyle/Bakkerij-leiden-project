@@ -2,7 +2,7 @@
 <?php include('head.php');?>
 
 <?php
-session_start();
+
 $status = "";
 if (isset($_POST['code']) && $_POST['code'] != "")
 {

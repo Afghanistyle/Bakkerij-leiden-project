@@ -1,3 +1,5 @@
+<?php include('database.php');?>
+
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -9,7 +11,7 @@
 		<div class="login">
       <!-- <div id="shady"></div> -->
 			<h1>Login</h1>
-			<form action="database.php" method="post">
+			<form action="login-setup.php" method="post">
 				<label for="username">
 					<i class="fas fa-user"></i>
 				</label>
