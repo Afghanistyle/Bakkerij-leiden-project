@@ -1,3 +1,4 @@
+<?php include('database.php'); ?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -5,11 +6,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link href="CSS/style-login.css" rel="stylesheet" type="text/css">
 	</head>
+
+
     <!-- login -->
 		<div class="login">
       <!-- <div id="shady"></div> -->
 			<h1>Login</h1>
-			<form action="database.php" method="post">
+			<form action="login-setup.php" method="post">
 				<label for="username">
 					<i class="fas fa-user"></i>
 				</label>
