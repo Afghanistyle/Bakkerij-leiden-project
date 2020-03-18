@@ -20,8 +20,10 @@ if (!isset($_SESSION['loggedin'])) {
     <div id="navibar">
        <a href="index.php"> <div id="logout"></div> </a>
     </div>
-    <div id="sidebar"></div>
+    <div id="midden">
     <p>Welkom, <?=$_SESSION['name']?></p>
+    <div id="openingstijd"></div>
+    </div>
 </body>
 </html>
 
