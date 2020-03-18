@@ -17,10 +17,13 @@ if (!isset($_SESSION['loggedin'])) {
     <link href="CSS/styleDB.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div id="navi">
+    <div id="navibar">
        <a href="index.php"> <div id="logout"></div> </a>
     </div>
+    <div id="midden">
     <p>Welkom, <?=$_SESSION['name']?></p>
+    <div id="openingstijd"></div>
+    </div>
 </body>
 </html>
 
