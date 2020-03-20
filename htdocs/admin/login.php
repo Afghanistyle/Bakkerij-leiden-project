@@ -1,6 +1,6 @@
-<?php include('database.php'); ?>
-<?php include('head.php');?>
-
+<?php include('includes/database.php'); ?>
+<?php include('includes/head.php');?>
+<?php include('includes/login-setup.php');?>
 <body>
 <!-- header -->
 <header>
@@ -49,5 +49,5 @@
       <!-- end login -->
 		</div>
 	</body>
-	<?php include('footer.php');?>
+	<?php include('includes/footer.php');?>
 </html>
