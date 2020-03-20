@@ -2,8 +2,6 @@
 <?php include('includes/head.php');?>
 
 <?php
-$database;
-session_start();
 $status = "";
 if (isset($_POST['code']) && $_POST['code'] != "")
 {
