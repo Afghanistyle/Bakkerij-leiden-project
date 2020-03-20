@@ -1,6 +1,6 @@
-<?php include('includes/database.php'); ?>
-<?php include('includes/head.php');?>
-<?php include('includes/login-setup.php');?>
+<?php include('../includes/database.php');?>
+<?php include('../includes/head.php');?>
+<?php include('../admin/login-setup.php');?>
 <body>
 <!-- header -->
 <header>
@@ -34,7 +34,7 @@
 		<div class="login">
       <div id="shady"></div>
 			<h1>Login</h1>
-			<form action="database.php" method="post">
+			<form action="includes/database.php" method="post">
 				<label for="gebruikersnaam">
 					<i class="fas fa-user"></i>
 				</label>

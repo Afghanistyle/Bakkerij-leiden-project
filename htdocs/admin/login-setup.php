@@ -1,4 +1,4 @@
-<?php include('includes/database.php');?>
+<?php include('../includes/database.php');?>
 
 <?php 
 if ( !isset($_POST['username'], $_POST['password']) ) {
