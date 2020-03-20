@@ -1,8 +1,9 @@
-<?php include('database.php');?>
-<?php include('head.php');?>
+<?php include('includes/database.php');?>
+<?php include('includes/head.php');?>
 
 <?php
-
+$database;
+session_start();
 $status = "";
 if (isset($_POST['code']) && $_POST['code'] != "")
 {
@@ -47,24 +48,25 @@ if (isset($_POST['code']) && $_POST['code'] != "")
 
 <style>
 .message_box .box{
-	margin: 10px 0px;
-    border: 1px solid #ffffff;
-    text-align: center;
-    font-weight: bold;
-    width: 30%;
-    margin: auto;
-    background-color: #fff;
-  }
+  margin: 10px 0px;
+  border: 1px solid #ffffff;
+  text-align: center;
+  font-weight: bold;
+  width: 30%;
+  margin: auto;
+  background-color: #fff;
+}
 
 </style>
 
 <body>
+
 <!-- header -->
 <header>
 
 <!-- menu -->
 <div class="container">
-  <div class="row">
+  <div class="row"></div>
     <div class="grid_12">
       <h1>
         <a href="index.php">
@@ -98,11 +100,11 @@ if (isset($_POST['code']) && $_POST['code'] != "")
        <div class="content gallery">
           <div class="container">
             <div class="row">
-              <div class="grid_3">
+              <div class="grid_4">
                 <div class="gall_block">
                   <div class="maxheight">
                     <a href="images/bbig1.jpg" class="gall_item">
-                      <img src="images/page2_img1.jpg" width="100" height="225" alt="">
+                      <img src="images/page2_img1.jpg" alt="">
                       </a>
                       <div class="gall_bot">
                         <div class="text1">Verassingspakket (1)</div>
@@ -128,8 +130,9 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                       </div>
                     </div>
                   </div>
+                
                             
-                  <div class="grid_3">
+                  <div class="grid_4">
                     <div class="gall_block">
                       <div class="maxheight">
                         <a href="images/big3.jpg" class="gall_item">
@@ -149,15 +152,13 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                             </form>
                             </div>"; } ?>
 
-                            <div style="clear:both;"></div>
-          
                              <!-- <a href="#" class="btn">In Winkelmand €7.50</a>-->
                             </div>
                           </div>
                         </div>
                       </div>
                       
-                      <div class="grid_3">
+                      <div class="grid_4">
                         <div class="gall_block">
                           <div class="maxheight">
                             <a href="images/bbig3.jpg" class="gall_item">
@@ -167,29 +168,27 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                                 <div class="text1">Verassingspakket (3)</div>
                                     Hier komt informatie over het product
                                     
-                                    <?php if(!empty($_SESSION[ "shopping_cart"])) { $cart_count=count(array_keys($_SESSION[ "shopping_cart"])); ?>
-                       
-                       <?php } $result=mysqli_query($con, "SELECT * FROM `products` where `id` = 3"); 
-                       while($row=mysqli_fetch_assoc($result)){ echo "<div class='product_wrapper'>
-                       <form method='post' action=''>
-                       <input type='hidden' name='code' value=".$row['code']." />
-                       <button type='submit' class='btn'>In Winkelmand €10.00</button>
-                       </form>
-                       </div>"; } ?>
+                                  <?php if(!empty($_SESSION[ "shopping_cart"])) { $cart_count=count(array_keys($_SESSION[ "shopping_cart"])); ?>
+                                  <?php } $result=mysqli_query($con, "SELECT * FROM `products` where `id` = 3"); 
+                                  while($row=mysqli_fetch_assoc($result)){ echo "<div class='product_wrapper'>
+                                  <form method='post' action=''>
+                                  <input type='hidden' name='code' value=".$row['code']." />
+                                  <button type='submit' class='btn'>In Winkelmand €10.00</button>
+                                  </form>
+                                  </div>"; } ?>
 
-                       <div style="clear:both;"></div>
-                                
-                                  
                                 </div>
                               </div>
                             </div>
                           </div>
+                                    
+                        
                          
-                          </section>
+                   
                                 </div>
                               </div>
                             </div>
-                         
-                          <?php include('footer.php');?>
+                            </section>
+                          <?php include('includes/footer.php');?>
                         </body>
                       </html>

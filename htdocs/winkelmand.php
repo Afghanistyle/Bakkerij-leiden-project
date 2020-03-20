@@ -1,16 +1,7 @@
 <?php session_start();?>
-<?php include('head.php');?>
+<?php include('includes/head.php');?>
 
 <style>
-h2 {
-    font-size: 36px;
-    line-height: 48px;
-    padding-top: 38px;
-    margin-bottom: 14px;
-    color: #fff;
-    text-align: center;
-}
-
 td {
     vertical-align: middle;
 }
@@ -22,28 +13,34 @@ td {
     font-weight: bold;
     width: 30%;
     margin: auto;
-	}
+}
 .table td {
 	border-bottom: #F0F0F0 1px solid;
-	padding: 10px;
-	}
+    padding: 10px;
+    height: 60px;
+    font-family: OpenSans-Regular;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+    background: #36304a;
+}
 .cart_div {
 	float:right;
 	font-weight:bold;
 	position:relative;
-	}
-
+}
 .cart .remove {
     background: none;
     border: none;
     color: #0067ab;
     cursor: pointer;
     padding: 0px;
-	}
+}
 .cart .remove:hover {
 	text-decoration:underline;
 }
-    
+ 
 .cart {
     color: #fff;
     text-align: center;
@@ -57,10 +54,11 @@ td {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 4px 2px;
+    margin: 10px 2px;
     cursor: pointer;
     float: right;
 }
+
 </style>
 
 <?php 
@@ -119,13 +117,13 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
           </div>
         </header>
         
-        <div style="width:960px; margin:auto;">
+        <div style="width:1170px; margin:auto;">
 
         <div class="cart">
             <?php if(isset($_SESSION[ "shopping_cart"])){ $total_price=0 ; ?>
             <table class="table">
                 <tbody>
-                    <tr>
+                    <tr class="100-head"></div>
                         <td>ID</td>
                         <td>ITEM NAAM</td>
                         <td>AANTAL</td>
@@ -164,33 +162,35 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                         <td>
                             <?php echo "€".$product[ "price"]*$product[ "quantity"]; ?>
                         </td>
-                    </tr>
-                    <?php $total_price +=( $product[ "price"]*$product[ "quantity"]); } ?>
-                    <tr>
+                        </tr>
+                            <?php $total_price +=( $product[ "price"]*$product[ "quantity"]); } ?>
+                        <tr>
                         <td colspan="5" align="right">
-                            <strong>TOTAAL: <?php echo "€".$total_price; ?></strong>
+                            <b>TOTAAL: <?php echo "€".$total_price; ?></b>
                         </td>
                     </tr>
                 </tbody>
             </table>
+
+            <a href="index.php" class="button">Uitchecken</a>
+            <a href="index.php" class="button">Verder winkelen</a>
+            
             <?php }else{ echo "<h2>Winkelmand is leeg!</h2>"; } ?>
-        </div>
+          
+            </div>
 
-        <div style="clear:both;"></div>
+            <div style="clear:both;"></div>
 
-        <div class="message_box" style="margin:10px 0px;">
-            <?php echo $status; ?>
-        </div>
+            <div class="message_box" style="margin:10px 0px;">
+                <?php echo $status; ?>
+            </div>
 
-		<a href="index.php" class="button">Checkout</a>
-        <a href="index.php" class="button">Continue shopping</a>
-        
     </div>
 </body>
 
 </html>
 
-<?php include('footer.php');?>
+<?php include('includes/footer.php');?>
 
 
 
