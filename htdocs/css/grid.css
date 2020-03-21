@@ -187,7 +187,7 @@ table {
 [class*="grid_"] {
   float: left;
   min-height: 1px;
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 .container {
@@ -227,7 +227,7 @@ table {
 }
 
 .grid_4 {
-  width: 370px;
+  width: 340px;
 }
 
 .grid_3 {
