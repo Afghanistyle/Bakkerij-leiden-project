@@ -1,5 +1,5 @@
-<?php include('../includes/database.php');?>
-<?php include('../includes/head.php');?>
+<?php include('database.php');?>
+<?php include('head.php');?>
 
 <?php 
 if ( !isset($_POST['username'], $_POST['password']) ) {
@@ -24,12 +24,12 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            header('location: admin/dashboard.php');
+            header('location: dashboard.php');
         } else {
-            header('location: admin/pu.php');
+            header('location: pu.php');
         }
     } else {
-        header('location: admin/pu.php');
+        header('location: pu.php');
     }
 
 	$stmt->close();

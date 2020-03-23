@@ -10,7 +10,7 @@
           <div class="middle">S.Koek@mborijnland.nl <br> Ma t/m Vrij 9:00-16:30</div>
           <!-- footer left -->
           <div class="copyright"><span class="brand">BakkerijLeiden</span> &copy; <span id="copyright-year">2020</span> |
-            <a href="admin/login.php">ADMIN</a> 
+            <a href="login.php">ADMIN</a> 
             <div>Website designed by <a href="" rel="nofollow">Abdulbari, Aron, Bilal, Martijn</a>
             <br>
             
