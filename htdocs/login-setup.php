@@ -1,5 +1,4 @@
 <?php include('database.php');?>
-<?php include('head.php');?>
 
 <?php 
 if ( !isset($_POST['username'], $_POST['password']) ) {
