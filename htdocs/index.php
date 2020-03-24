@@ -1,5 +1,5 @@
 <?php include('database.php');?>
-<?php include('includes/head.php');?>
+<?php include('head.php');?>
 
 <?php
 $status = "";
@@ -187,6 +187,6 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                               </div>
                             </div>
                             </section>
-                          <?php include('includes/footer.php');?>
+                          <?php include('footer.php');?>
                         </body>
                       </html>

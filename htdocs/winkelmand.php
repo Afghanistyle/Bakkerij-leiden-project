@@ -1,5 +1,5 @@
 <?php session_start();?>
-<?php include('includes/head.php');?>
+<?php include('head.php');?>
 
 <style>
 td {
@@ -190,7 +190,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
 
 </html>
 
-<?php include('includes/footer.php');?>
+<?php include('footer.php');?>
 
 
 
