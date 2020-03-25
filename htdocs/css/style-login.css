@@ -6,9 +6,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+/* body {
     background-color: #435165;
-}
+} */
 
 .login {
     width: 400px;
@@ -19,7 +19,7 @@ body {
 
 .login h1 {
     text-align: center;
-    color: #5b6574;
+    color: #fff;
     font-size: 24px;
     padding: 20px 0 20px 0;
     border-bottom: 1px solid #e54160cf;
@@ -61,11 +61,16 @@ body {
     cursor: pointer;
     font-weight: bold;
     color: #ffffff;
+    transition: background-color 0.2s;
 }
 
 .login form input[type="submit"]:hover {
-    background-color: #c02340cf;
+    background-color: #e54160cf;
     transition: background-color 0.2s;
+}
+
+#shady {
+    background-image: linear-gradient(#3a0f49, #e54160cf);
 }
 
 #login {
@@ -76,23 +81,6 @@ body {
 
 #terug {
     width: 50%;
-    padding: 15px;
-    margin-top: -51px;
-    background-color: #e54160cf;
-    border: 0;
-    cursor: pointer;
-    font-weight: bold;
-    margin-right: 327px;
-    text-align: center;
-}
-
-#terug:hover {
-    background-color: #c02340cf;
-    transition: background-color 0.2s;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    outline: none;
+    margin-right: 200px;
+    margin-top: -71px;
 }
