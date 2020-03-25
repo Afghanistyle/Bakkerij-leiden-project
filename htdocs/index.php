@@ -1,8 +1,10 @@
-<?php include('database.php');?>
-<?php include('head.php');?>
+<?php include('includes/database.php');?>
+<?php include('includes/head.php');?>
 
 <?php
 $status = "";
+
+session_start();
 if (isset($_POST['code']) && $_POST['code'] != "")
 {
     $code = $_POST['code'];
@@ -26,19 +28,19 @@ if (isset($_POST['code']) && $_POST['code'] != "")
     if (empty($_SESSION["shopping_cart"]))
     {
         $_SESSION["shopping_cart"] = $cartArray;
-        $status = "<div class='box' style='color:green;'>Product is toegevoegd aan winkmand!</div>";
+        $status = "<div class='box' style='color:green;'>Product $name is toegevoegd aan winkelmand!</div>";
     }
     else
     {
         $array_keys = array_keys($_SESSION["shopping_cart"]);
         if (in_array($code, $array_keys))
     {
-        $status = "<div class='box' style='color:red;'>Product is al in winkelmand!</div>";
+        $status = "<div class='box' style='color:red;'>Product $name is al in winkelmand!</div>";
     }
     else
     {
         $_SESSION["shopping_cart"] = array_merge($_SESSION["shopping_cart"], $cartArray);
-        $status = "<div class='box' style='color:green;'>Product is toegevoegd aan winkelmand!</div>";
+        $status = "<div class='box' style='color:green;'>Product $name is toegevoegd aan winkelmand!</div>";
         }
     }
 }
@@ -90,11 +92,13 @@ if (isset($_POST['code']) && $_POST['code'] != "")
             <ul></ul>
           </div>
         </header>
+       
         <!-- content -->
        <h2> Producten </h2>
        <div class="message_box" style="margin:10px 0px;">
-            <?php echo $status; ?>
+            <?php echo $status; ?> 
        </div>
+       
        <div class="content gallery">
           <div class="container">
             <div class="row">
@@ -128,8 +132,7 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                       </div>
                     </div>
                   </div>
-                
-                            
+                      
                   <div class="grid_4">
                     <div class="gall_block">
                       <div class="maxheight">
@@ -179,14 +182,11 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                               </div>
                             </div>
                           </div>
-                                    
-                        
-                         
-                   
-                                </div>
-                              </div>
-                            </div>
-                            </section>
-                          <?php include('footer.php');?>
-                        </body>
-                      </html>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    </section>
+                  <?php include('includes/footer.php');?>
+                </body>
+              </html>
