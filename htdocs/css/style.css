@@ -25,14 +25,11 @@ a[href^="tel:"] {
 body {
   position: relative;
   color: #969696;
-  background: -webkit-gradient(
-      linear,
+  background: -webkit-gradient(linear,
       left top,
       left bottom,
       from(#e54160),
-      to(#3a0f49)
-    )
-    fixed;
+      to(#3a0f49)) fixed;
   font: 300 14px/20px "Open Sans", sans-serif;
 }
 
@@ -160,7 +157,6 @@ header h1 a img {
   overflow: hidden;
   display: block;
   position: relative;
-  padding-bottom: 33vh;
 }
 
 .page1 .content {
@@ -260,7 +256,7 @@ header h1 a img {
   background-color: #e54160;
 }
 
-.socials .fa + .fa {
+.socials .fa+.fa {
   margin-left: 16px;
 }
 
@@ -308,7 +304,7 @@ header h1 a img {
 }
 
 @media only screen and (max-width: 768px) {
-  .banner > img {
+  .banner>img {
     width: 100%;
   }
 
