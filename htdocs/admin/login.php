@@ -10,7 +10,7 @@
 		<div class="login">
       <!-- <div id="shady"></div> -->
 			<h1>Login</h1>
-			<form action="login-setup.php" method="post">
+			<form action="admin/login-setup.php" method="post">
 				<label for="username">
 					<i class="fas fa-user"></i>
 				</label>

@@ -4,7 +4,6 @@
 <?php
 $status = "";
 
-session_start();
 if (isset($_POST['code']) && $_POST['code'] != "")
 {
     $code = $_POST['code'];
