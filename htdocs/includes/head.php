@@ -11,8 +11,8 @@
   <!-- Favicons-->
   <link rel="icon" href="images/favicon.ico">
   <link rel="shortcut icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="../css/style.css?v=1.1">
-  <link href="../css/style-login.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css?v=1.1">
+  <link href="css/style-login.css" rel="stylesheet" type="text/css">
   <!-- Scripts-->
   <script src="js/jquery.js"></script>
   <script src="js/jquery-migrate-1.1.1.js"></script>
