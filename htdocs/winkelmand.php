@@ -1,6 +1,5 @@
-<?php session_start();?>
-<?php include('head.php');?>
-
+<?php include('includes/head.php');?>
+<?php include('includes/database.php');?>
 <style>
 td {
     vertical-align: middle;
@@ -53,6 +52,8 @@ td {
     padding: 10px;
     text-align: center;
     text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
     display: inline-block;
     margin: 10px 2px;
     cursor: pointer;
@@ -63,13 +64,14 @@ td {
 
 <?php 
 $status="";
+session_start();
 if (isset($_POST['action']) && $_POST['action']=="remove"){
 if(!empty($_SESSION["shopping_cart"])) {
 	foreach($_SESSION["shopping_cart"] as $key => $value) {
 		if($_POST["code"] == $key){
 		unset($_SESSION["shopping_cart"][$key]);
 		$status = "<div class='box' style='color:white;'>
-        Product is verwijderd van winkelmand!</div>";
+        Product is verwijderd uit winkelmand!</div>";
         }
 		if(empty($_SESSION["shopping_cart"]))
 		    unset($_SESSION["shopping_cart"]);
@@ -174,12 +176,12 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
 
             <a href="index.php" class="button">Uitchecken</a>
             <a href="index.php" class="button">Verder winkelen</a>
+
+            <div style="clear:both;"></div>
             
             <?php }else{ echo "<h2>Winkelmand is leeg!</h2>"; } ?>
           
             </div>
-
-            <div style="clear:both;"></div>
 
             <div class="message_box" style="margin:10px 0px;">
                 <?php echo $status; ?>
@@ -190,7 +192,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
 
 </html>
 
-<?php include('footer.php');?>
+<?php include('includes/footer.php');?>
 
 
 
