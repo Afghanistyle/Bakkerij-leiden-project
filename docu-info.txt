@@ -1,0 +1,5 @@
+behoefte analyse
+plan van aanpak
+FO (wireframe, navigatiestroom diagram)
+TO data base met gegevens (geheugen etc) (verplicht ssl verbinding) (ERD= database)
+UML (databasediagram, Flowchart, use case, navigatiestroom diagram, wireframes)
