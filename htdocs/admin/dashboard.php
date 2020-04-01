@@ -12,7 +12,7 @@
 		<nav class="navtop">
 			<div>
 				<h1>Website Title</h1>
-				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+				<a href="../index.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
 		<div class="content">
