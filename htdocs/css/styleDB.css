@@ -1,8 +1,8 @@
 .navtop {
-	background-color: #2f3947;
-	height: 60px;
-	width: 104%;
-	border: 0;
+    background-color: #c02340cf;
+    height: 60px;
+    width: 95%;
+    margin: 0 auto;
 }
 .navtop div {
 	display: flex;

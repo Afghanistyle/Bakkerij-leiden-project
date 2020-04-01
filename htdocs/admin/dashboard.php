@@ -11,7 +11,7 @@
 	<body class="loggedin">
 		<nav class="navtop">
 			<div>
-				<h1>Website Title</h1>
+				<h1>Dashboard</h1>
 				<a href="../index.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
