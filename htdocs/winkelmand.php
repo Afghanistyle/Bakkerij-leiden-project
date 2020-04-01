@@ -24,21 +24,18 @@ td {
     font-weight: unset;
     background: #36304a;
 }
-.cart_div {
-	float:right;
-	font-weight:bold;
-	position:relative;
-}
+
 .cart .remove {
     background: none;
     border: none;
     color: #0067ab;
     cursor: pointer;
-    padding: 0px;
+    font-size: 15px;
+    padding: 10px;
 }
 .cart .remove:hover {
-	text-decoration:underline;
-}
+ text-decoration:underline;
+ }
  
 .cart {
     color: #fff;
@@ -132,12 +129,12 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                         <td>PRIJS</td>
                         <td>AANTAL PRIJS</td>
                     </tr>
-                    <?php foreach ($_SESSION[ "shopping_cart"] as $product){ ?>
+                    <?php foreach ($_SESSION["shopping_cart"] as $product){ ?>
                     <tr>
                         <td><img src='<?php echo $product["image"]; ?>' width="75" height="75" />
                         </td>
                         <td>
-                            <?php echo $product[ "name"]; ?>
+                            <?php echo $product["name"]; ?>
                             <br />
                             <form method='post' action=''>
                                 <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
