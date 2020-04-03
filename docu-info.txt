@@ -1,5 +1,5 @@
 behoefte analyse
 plan van aanpak
-FO (wireframe, navigatiestroom diagram)
+FO (wireframe, navigatiestroom diagram, use case)
 TO data base met gegevens (geheugen etc) (verplicht ssl verbinding) (ERD= database)
 UML (databasediagram, Flowchart, use case, navigatiestroom diagram, wireframes)
