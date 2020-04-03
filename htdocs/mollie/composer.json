@@ -1,0 +1,9 @@
+{
+    "name": "dtver/kamo-project",
+    "description": "student project",
+    "type": "project",
+    "require": {
+        "mollie/mollie-api-php": "2.0",
+        "mollie/oauth2-mollie-php": "^2.2"
+    }
+}
