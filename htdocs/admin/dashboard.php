@@ -8,7 +8,8 @@
 		<link href="../css/styleDB.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
-	<body class="loggedin">
+	<body>
+		<div class="loggedin">
 		<nav class="navtop">
 			<div>
 				<h1>Dashboard</h1>
@@ -18,7 +19,9 @@
 		<div class="content">
 			<h2>Home Page</h2>
 			<p>Welcome terug, <?=$_SESSION['name']?>!</p>
+			
 		</div>
+	</div>
 	</body>
 </html>
 

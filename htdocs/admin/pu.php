@@ -10,6 +10,7 @@
     <div id="container">
     <div id="blok">  Gebruikersnaam of Wachtwoord </div>
     <div id="onj"> Incorrect </div>
+    <a href="login.php"><div id="terug"> Terug </div></a>
 </div>
 </body>
 </html>

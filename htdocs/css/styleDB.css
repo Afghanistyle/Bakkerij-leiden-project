@@ -1,7 +1,11 @@
+html {
+	background-color: #778899;
+}
+
 .navtop {
     background-color: #c02340cf;
     height: 60px;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
 }
 .navtop div {
@@ -46,13 +50,17 @@ body.loggedin {
 	padding: 25px 0;
 	font-size: 22px;
 	border-bottom: 1px solid #e0e0e3;
-	color: #4a536e;
+	color: #5B5252;
 }
 .content > p, .content > div {
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-	margin: 25px 0;
-	padding: 25px;
-	background-color: #fff;
+    margin: 25px 0;
+    padding: 12px;
+    background-color: #fff;
+    font-size: 2vh;
+    font-family: monospace;
+}
+}
 }
 .content > p table td, .content > div table td {
 	padding: 5px;
