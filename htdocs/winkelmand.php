@@ -61,15 +61,17 @@ td {
 
 <?php 
 $status="";
-session_start();
+//session_start();
+// Remove product from cart, check for the URL param "remove", this is the product id, make sure it's a number and check if it's in the cart
 if (isset($_POST['action']) && $_POST['action']=="remove"){
 if(!empty($_SESSION["shopping_cart"])) {
 	foreach($_SESSION["shopping_cart"] as $key => $value) {
-		if($_POST["code"] == $key){
+		if($_POST["desc"] == $key){
 		unset($_SESSION["shopping_cart"][$key]);
 		$status = "<div class='box' style='color:white;'>
         Product is verwijderd uit winkelmand!</div>";
         }
+         // Remove the product from the shopping cart
 		if(empty($_SESSION["shopping_cart"]))
 		    unset($_SESSION["shopping_cart"]);
 		}		
@@ -78,7 +80,7 @@ if(!empty($_SESSION["shopping_cart"])) {
 
 if (isset($_POST['action']) && $_POST['action']=="change"){
   foreach($_SESSION["shopping_cart"] as &$value){
-    if($value['code'] === $_POST["code"]){
+    if($value['desc'] === $_POST["desc"]){
         $value['quantity'] = $_POST["quantity"];
         break; // Stop the loop after we've found the product
     }
@@ -137,14 +139,14 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                             <?php echo $product["name"]; ?>
                             <br />
                             <form method='post' action=''>
-                                <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
+                                <input type='hidden' name='desc' value="<?php echo $product["desc"]; ?>" />
                                 <input type='hidden' name='action' value="remove" />
                                 <button type='submit' class='remove'>Verwijder Item</button>
                             </form>
                         </td>
                         <td>
                             <form method='post' action=''>
-                                <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
+                                <input type='hidden' name='desc' value="<?php echo $product["desc"]; ?>" />
                                 <input type='hidden' name='action' value="change" />
                                 <select name='quantity' class='quantity' onchange="this.form.submit()">
                                     <option <?php if($product[ "quantity"]==1) echo "selected";?> value="1">1</option>

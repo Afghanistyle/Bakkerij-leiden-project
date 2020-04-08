@@ -3,21 +3,21 @@
 
 <?php
 $status = "";
-
-if (isset($_POST['code']) && $_POST['code'] != "")
+//session_start();
+if (isset($_POST['desc']) && $_POST['desc'] != "")
 {
-    $code = $_POST['code'];
-    $result = mysqli_query($con, "SELECT * FROM `products` WHERE `code`='$code'");
+    $desc = $_POST['desc'];
+    $result = mysqli_query($con, "SELECT * FROM `products` WHERE `desc`='$desc'");
     $row = mysqli_fetch_assoc($result);
     $name = $row['name'];
-    $code = $row['code'];
+    $desc = $row['desc'];
     $price = $row['price'];
     $image = $row['image'];
 
     $cartArray = array(
-        $code => array(
+        $desc => array(
             'name' => $name,
-            'code' => $code,
+            'desc' => $desc,
             'price' => $price,
             'quantity' => 1,
             'image' => $image
@@ -27,19 +27,19 @@ if (isset($_POST['code']) && $_POST['code'] != "")
     if (empty($_SESSION["shopping_cart"]))
     {
         $_SESSION["shopping_cart"] = $cartArray;
-        $status = "<div class='box' style='color:green;'>Product $name is toegevoegd aan winkelmand!</div>";
+        $status = "<div class='box' style='color:#cfd84a;'>Het artikel is toegevoegd aan winkelmand!</div>";  
     }
     else
     {
         $array_keys = array_keys($_SESSION["shopping_cart"]);
-        if (in_array($code, $array_keys))
+        if (in_array($desc, $array_keys))
     {
-        $status = "<div class='box' style='color:red;'>Product $name is al in winkelmand!</div>";
+        $status = "<div class='box' style='color:#cfd84a;'>Het artikel is toegevoegd aan winkelmand!</div>";  
     }
     else
     {
         $_SESSION["shopping_cart"] = array_merge($_SESSION["shopping_cart"], $cartArray);
-        $status = "<div class='box' style='color:green;'>Product $name is toegevoegd aan winkelmand!</div>";
+        $status = "<div class='box' style='color:#cfd84a;'>Het artikel is toegevoegd aan winkelmand!</div>"; 
         }
     }
 }
@@ -47,13 +47,12 @@ if (isset($_POST['code']) && $_POST['code'] != "")
 
 <style>
 .message_box .box{
-  margin: 10px 0px;
-  border: 1px solid #ffffff;
-  text-align: center;
-  font-weight: bold;
-  width: 30%;
-  margin: auto;
-  background-color: #fff;
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    text-transform: uppercase;
 }
 
 </style>
@@ -108,9 +107,11 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                       <img src="images/page2_img1.jpg" alt="">
                       </a>
                       <div class="gall_bot">
+                      
                         <div class="text1">Verassingspakket (1)</div>
                                     Hier komt informatie over het product
-                                    
+                                    <br>
+                                   
                           <?php if (!empty($_SESSION["shopping_cart"]))
                           {
                           $cart_count = count(array_keys($_SESSION["shopping_cart"])); ?>
@@ -121,8 +122,8 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                           {
                             echo "<div class='product_wrapper'>
                             <form method='post' action=''>
-                            <input type='hidden' name='code' value=" . $row['code'] . " />
-                            <button type='submit' class='btn'>In Winkelmand €5.00</button>
+                            <input type='hidden' name='desc' value=" . $row['desc'] . " />
+                            <button type='submit' class='btn'>IN WINKELWAGEN €5.00</button>
                             </form>
                             </div>";
                           } ?>
@@ -147,12 +148,11 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                             <?php } $result=mysqli_query($con, "SELECT * FROM `products` where `id` = 2"); 
                             while($row=mysqli_fetch_assoc($result)){ echo "<div class='product_wrapper'>
                             <form method='post' action=''>
-                            <input type='hidden' name='code' value=".$row['code']." />
-                            <button type='submit' class='btn'>In Winkelmand €7.50</button>
+                            <input type='hidden' name='desc' value=".$row['desc']." />
+                            <button type='submit' class='btn'>IN WINKELWAGEN €7.50</button>
                             </form>
                             </div>"; } ?>
 
-                             <!-- <a href="#" class="btn">In Winkelmand €7.50</a>-->
                             </div>
                           </div>
                         </div>
@@ -172,8 +172,8 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                                   <?php } $result=mysqli_query($con, "SELECT * FROM `products` where `id` = 3"); 
                                   while($row=mysqli_fetch_assoc($result)){ echo "<div class='product_wrapper'>
                                   <form method='post' action=''>
-                                  <input type='hidden' name='code' value=".$row['code']." />
-                                  <button type='submit' class='btn'>In Winkelmand €10.00</button>
+                                  <input type='hidden' name='desc' value=".$row['desc']." />
+                                  <button type='submit' class='btn'>IN WINKELWAGEN €10.00</button>
                                   </form>
                                   </div>"; } ?>
 
@@ -183,9 +183,9 @@ if (isset($_POST['code']) && $_POST['code'] != "")
                           </div>
                         </div>
                       </div>
-                      </div>
                     </div>
-                    </section>
-                  <?php include('includes/footer.php');?>
-                </body>
-              </html>
+                  </div>
+                </section>
+              <?php include('includes/footer.php');?>
+            </body>
+          </html>
