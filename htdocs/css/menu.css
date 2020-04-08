@@ -311,6 +311,7 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
         cursor: pointer;
         font-size: 12px;
         text-transform: uppercase;
+        left: -20px;
     }
 
     #cssmenu #menu-button::after {
