@@ -110,7 +110,6 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                       
                         <div class="text1">Verassingspakket (1)</div>
                                     Hier komt informatie over het product
-                                    <br>
                                    
                           <?php if (!empty($_SESSION["shopping_cart"]))
                           {
