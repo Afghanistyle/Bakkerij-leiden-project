@@ -20,11 +20,11 @@
             </div>
              <!-- footer right -->
              <div class="socials">
-            <a href="mborijnland.nl/facebook" class="fab fa-facebook"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-youtube"></a>
-            <a href="#" class="fab fa-linkedin"></a>
+            <a href="https://nl-nl.facebook.com/mboRijnland/" class="fab fa-facebook"></a>
+            <a href="https://www.instagram.com/mborijnland/?hl=nl" class="fab fa-instagram"></a>
+            <a href="https://twitter.com/mborijnland" class="fab fa-twitter"></a>
+            <a href="https://www.youtube.com/channel/UCFmiIyIrkm03gPDR3TcWKBQ" class="fab fa-youtube"></a>
+            <a href="https://www.linkedin.com/school/mborijnland/?originalSubdomain=nl" class="fab fa-linkedin"></a>
           </div>
         </div>
       </div>

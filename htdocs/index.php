@@ -104,7 +104,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                 <div class="gall_block">
                   <div class="maxheight">
                     <a href="images/bbig1.jpg" class="gall_item">
-                      <img src="images/page2_img1.jpg" alt="">
+                      <img src="images/tas.jpg" alt="">
                       </a>
                       <div class="gall_bot">
                       
