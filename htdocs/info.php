@@ -35,4 +35,9 @@
           </div>
         </header>
 
+        <!-- content -->
+
+    <div class=""
+
+
 <?php include('includes/footer.php');?>
