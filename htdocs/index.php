@@ -137,7 +137,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                     <div class="gall_block">
                       <div class="maxheight">
                         <a href="images/big3.jpg" class="gall_item">
-                          <img src="images/page2_img2.jpg" alt="">
+                          <img src="images/tas.jpg" alt="">
                           </a>
                           <div class="gall_bot">
                             <div class="text1">Verassingspakket (2)</div>
@@ -162,7 +162,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                         <div class="gall_block">
                           <div class="maxheight">
                             <a href="images/bbig3.jpg" class="gall_item">
-                              <img src="images/page2_img3.jpg" alt="">
+                              <img src="images/tas.jpg" alt="">
                               </a>
                               <div class="gall_bot">
                                 <div class="text1">Verassingspakket (3)</div>
