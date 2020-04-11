@@ -34,7 +34,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
         $array_keys = array_keys($_SESSION["shopping_cart"]);
         if (in_array($desc, $array_keys))
     {
-        $status = "<div class='box' style='color:#cfd84a;'>Het artikel is toegevoegd aan winkelmand!</div>";  
+        $status = "<div class='box' style='color:#cfd84a;'>Het artikel is al in de winkelmand!</div>";  
     }
     else
     {
