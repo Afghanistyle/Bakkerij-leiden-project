@@ -77,8 +77,8 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
         
           <ul>
             <li>
-              <a href='index.php'>
-                <i class="fas fa-home"></i> Home
+              <a href='info.php'>
+              <i class="fas fa-info"></i> Informatie
               </a>
             </li>
             <li>
@@ -87,7 +87,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
               </a>
               
             </li>
-            <ul></ul>
+
           </div>
         </header>
        
