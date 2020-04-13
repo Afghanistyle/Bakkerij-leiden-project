@@ -2,7 +2,7 @@
 <?php include('includes/head.php');?>
 
 <?php
-$status = "Hello";
+$status = "";
 //session_start();
 if (isset($_POST['desc']) && $_POST['desc'] != "")
 {
@@ -77,8 +77,8 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
         
           <ul>
             <li>
-              <a href='index.php'>
-                <i class="fas fa-home"></i> Home
+            <a href='info.php'>
+              <i class="fas fa-info"></i> Informatie
               </a>
             </li>
             <li>
