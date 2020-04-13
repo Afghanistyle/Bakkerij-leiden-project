@@ -24,7 +24,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
         )
     );
 
-   if (empty($_SESSION["shopping_cart"]))
+    if (empty($_SESSION["shopping_cart"]))
     {
         $_SESSION["shopping_cart"] = $cartArray;
         $status = "<div class='box' style='color:#cfd84a;'>Het artikel is toegevoegd aan winkelmand!</div>";  
@@ -77,7 +77,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
         
           <ul>
             <li>
-            <a href='info.php'>
+              <a href='info.php'>
               <i class="fas fa-info"></i> Informatie
               </a>
             </li>
@@ -87,7 +87,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
               </a>
               
             </li>
-            <ul></ul>
+
           </div>
         </header>
        
@@ -104,13 +104,12 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                 <div class="gall_block">
                   <div class="maxheight">
                     <a href="images/bbig1.jpg" class="gall_item">
-                      <img src="images/page2_img1.jpg" alt="">
+                      <img src="images/tas.jpg" alt="">
                       </a>
                       <div class="gall_bot">
                       
                         <div class="text1">Verassingspakket (1)</div>
                                     Hier komt informatie over het product
-                                    
                                    
                           <?php if (!empty($_SESSION["shopping_cart"]))
                           {
@@ -118,7 +117,6 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                           <?php
                           }
                           $result = mysqli_query($con, "SELECT * FROM `products` where `id` = 1");
-                          
                           while ($row = mysqli_fetch_assoc($result))
                           {
                             echo "<div class='product_wrapper'>
@@ -138,7 +136,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                     <div class="gall_block">
                       <div class="maxheight">
                         <a href="images/big3.jpg" class="gall_item">
-                          <img src="images/page2_img2.jpg" alt="">
+                          <img src="images/tas.jpg" alt="">
                           </a>
                           <div class="gall_bot">
                             <div class="text1">Verassingspakket (2)</div>
@@ -163,7 +161,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                         <div class="gall_block">
                           <div class="maxheight">
                             <a href="images/bbig3.jpg" class="gall_item">
-                              <img src="images/page2_img3.jpg" alt="">
+                              <img src="images/tas.jpg" alt="">
                               </a>
                               <div class="gall_bot">
                                 <div class="text1">Verassingspakket (3)</div>
