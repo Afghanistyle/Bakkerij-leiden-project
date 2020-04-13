@@ -1,0 +1,14 @@
+.allergenen {
+    width: 20%;
+    float: right;
+    padding: 100px;
+}
+
+#info {
+    position: absolute;
+    padding-left: 1456px;
+    padding-top: 20px;
+    font-size: 29px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}

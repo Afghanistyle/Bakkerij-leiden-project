@@ -5,13 +5,12 @@
 
 <!-- header -->
 <header>
-
 <!-- menu -->
 <div class="container">
   <div class="row"></div>
     <div class="grid_12">
       <h1>
-        <a href="index.php">
+        <a>
           <img src="images/logo.png" alt="Logo alt">
           <img src="images/stripes.png" class="stripes" alt="Logo alt">
           </a>
@@ -34,5 +33,20 @@
 
           </div>
         </header>
+
+        <!-- content -->
+        
+    <div class="product"> </div>
+
+    <div id="info"> deze allergenen zullen mogelijk <br><br> voorkomen in de producten: </div>
+        
+    <div class="allergenen"><!-- hier komen foto's -->
+    <img src="images/1.png" width="125px" height="125px"><img src="images/2.png" width="125px" height="125px"><img src="images/3.png" width="125px" height="125px">
+    <img src="images/4.png" width="125px" height="125px"><img src="images/5.png" width="125px" height="125px"><img src="images/6.png" width="125px" height="125px">
+    <img src="images/7.png" width="125px" height="125px"><img src="images/8.png" width="125px" height="125px"><img src="images/9.png" width="125px" height="125px">
+    <img src="images/10.png" width="125px" height="125px"><img src="images/11.png" width="125px" height="125px"><img src="images/14.png" width="125px" height="125px">
+    <img src="images/13.png" width="125px" height="125px"><img src="images/12.png" width="125px" height="125px">
+    </div>
+
 
 <?php include('includes/footer.php');?>
