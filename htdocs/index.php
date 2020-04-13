@@ -122,7 +122,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                             echo "<div class='product_wrapper'>
                             <form method='post' action=''>
                             <input type='hidden' name='desc' value=" . $row['desc'] . " />
-                            <button type='submit' class='btn'>IN WINKELWAGEN €5.00</button>
+                            <button type='submit' class='btn'>IN WINKELMAND €5.00</button>
                             </form>
                             </div>";
                           } ?>
@@ -148,7 +148,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                             while($row=mysqli_fetch_assoc($result)){ echo "<div class='product_wrapper'>
                             <form method='post' action=''>
                             <input type='hidden' name='desc' value=".$row['desc']." />
-                            <button type='submit' class='btn'>IN WINKELWAGEN €7.50</button>
+                            <button type='submit' class='btn'>IN WINKELMAND €7.50</button>
                             </form>
                             </div>"; } ?>
 
@@ -172,7 +172,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                                   while($row=mysqli_fetch_assoc($result)){ echo "<div class='product_wrapper'>
                                   <form method='post' action=''>
                                   <input type='hidden' name='desc' value=".$row['desc']." />
-                                  <button type='submit' class='btn'>IN WINKELWAGEN €10.00</button>
+                                  <button type='submit' class='btn'>IN WINKELMAND €10.00</button>
                                   </form>
                                   </div>"; } ?>
 
