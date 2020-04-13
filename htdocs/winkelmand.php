@@ -133,7 +133,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                     </tr>
                     <?php foreach ($_SESSION["shopping_cart"] as $product){ ?>
                     <tr>
-                        <td><img src='<?php echo $product["image"]; ?>' width="75" height="75" />
+                        <td><img src="images/tas.jpg"<?php echo $product["image"]; ?>' width="75" height="75" />
                         </td>
                         <td>
                             <?php echo $product["name"]; ?>

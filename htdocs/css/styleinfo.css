@@ -12,3 +12,12 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
 }
+
+h6 {
+    padding-left: 166px;
+    font-size: 4em;
+    padding-top: 39px;
+    position: absolute;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

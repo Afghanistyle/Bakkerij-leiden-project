@@ -35,6 +35,8 @@
         </header>
 
         <!-- content -->
+
+    <h6> Informatie </h1>
         
     <div class="product"> </div>
 
