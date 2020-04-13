@@ -67,7 +67,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
   <div class="row"></div>
     <div class="grid_12">
       <h1>
-        <a href="index.php">
+        <a>
           <img src="images/logo.png" alt="Logo alt">
           <img src="images/stripes.png" class="stripes" alt="Logo alt">
           </a>
