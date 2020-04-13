@@ -204,13 +204,16 @@ header h1 a img {
 }
 
 #footer {
-  position: fixed;
-  min-height: 53px;
-  bottom: 0;
-  width: 100%;
-  background-color: #1e1e1e !important;
-  border-top: 2px solid #db3e5e;
-  padding: 17px;
+    position: fixed;    
+    background-color: #1e1e1e !important;
+    border-top: 2px solid #db3e5e;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem
 }
 
 .copyright {
@@ -271,8 +274,8 @@ header h1 a img {
 
 .stripes {
   position: absolute;
-  height: 174%;
-  margin-top: -55%;
+  height: 173%;
+  margin-top: -54%;
   right: -235%;
 }
 

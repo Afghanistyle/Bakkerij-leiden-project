@@ -1,5 +1,5 @@
-<?php include('includes/head.php');?>
 <?php include('includes/database.php');?>
+<?php include('includes/head.php');?>
 <style>
 td {
     vertical-align: middle;
@@ -121,7 +121,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
         <div style="width:1170px; margin:auto;">
 
         <div class="cart">
-            <?php if(isset($_SESSION[ "shopping_cart"])){ $total_price=0 ; ?>
+            <?php if(isset($_SESSION["shopping_cart"])){ $total_price=0 ; ?>
             <table class="table">
                 <tbody>
                     <tr class="100-head"></div>
@@ -158,13 +158,13 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                             </form>
                         </td>
                         <td>
-                            <?php echo "€".$product[ "price"]; ?>
+                            <?php echo "€".$product["price"]; ?>
                         </td>
                         <td>
-                            <?php echo "€".$product[ "price"]*$product[ "quantity"]; ?>
+                            <?php echo "€".$product["price"]*$product["quantity"]; ?>
                         </td>
                         </tr>
-                            <?php $total_price +=( $product[ "price"]*$product[ "quantity"]); } ?>
+                            <?php $total_price +=( $product["price"]*$product["quantity"]); } ?>
                         <tr>
                         <td colspan="5" align="right">
                             <b>TOTAAL: <?php echo "€".$total_price; ?></b>
@@ -173,7 +173,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                 </tbody>
             </table>
 
-            <a href="index.php" class="button">Uitchecken</a>
+            <a href="form.php" class="button">Uitchecken</a>
             <a href="index.php" class="button">Verder winkelen</a>
 
             <div style="clear:both;"></div>
