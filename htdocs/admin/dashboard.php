@@ -17,8 +17,8 @@
 			</div>
 		</nav>
 		<div class="content">
-			<h2>Home Page</h2>
-			<p>Welcome terug, <?=$_SESSION['name']?>!</p>
+			<h2>Beginpagina</h2>
+			<p>Welcome terug!</p>
 			
 		</div>
 	</div>
