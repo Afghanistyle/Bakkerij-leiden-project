@@ -48,22 +48,28 @@ try {
      */
 
     session_start();
-    $_SESSION['customer_name'] = $_POST['customer_name'];
-    $_POST['customer_name'] = $_SESSION['customer_name'];
 
-    $_SESSION['date'] = $_POST['date'];
-    $_POST['date'] = $_SESSION['date'];
+    if (isset($_SESSION['customer_name'])) {
+        $customer_name = $_POST['customer_name'];
+    }
 
-    $_SESSION['customer_email'] = $_POST['customer_email'];
-    $_POST['customer_email'] = $_SESSION['customer_email'];
+    if (isset($_SESSION['customer_email'])) {
+        $customer_email = $_POST['customer_email'];
+    }
 
-    $total_price = $_POST['total_price'];
+    if (isset($_SESSION['date'])) {
+        $date = $_POST['date'];
+    }
+
+    if (isset($_SESSION['total_price'])) {
+        $total_price = $_POST['total_price'];
+    }
     
     $payment = $mollie->payments->create([
-    "amount" => 
+    "amount" =>  
     [
     "currency" => "EUR", 
-    "value" => "$total_price"
+    "value" => "total_price"
     ], 
     "method" => \Mollie\Api\Types\PaymentMethod::IDEAL, 
     "description" => "Order #{$orderId}", 
@@ -85,41 +91,5 @@ try {
 }
 
 
-/* Verhagen 
 
-    include "lib/error_reporter.dev.php";
 
-include "vendor/autoload.php";
-
-$mollie = new \Mollie\Api\MollieApiClient();
-$mollie->setApiKey('<<eigen sleutel plaatsen hier>>');
-
-$totalPrice = '';
-if(isset($_POST['totalprice'])){
-    $totalPrice = $_POST['totalprice'];
-} else {
-    $totalPrice = '15.00';
-}
-
-if(isset($_POST['package'])){
-    $package = $_POST['package'];
-} else {
-    $package = 'Roomsoes pakket';
-}
-
-$molliePaymentArray = array(
-    "amount" => array(
-        "value"=> "10.00",
-        "currency" => "EUR"
-    ),
-    "description" => 'lang leve de lol',
-    "redirectUrl" => 'https://react-ar.com/payment-complete.php'
-);
-
-$betaling = $mollie->payments->create($molliePaymentArray);
-echo 'end of payment';
-var_dump($betaling); exit;
-// in het bestand payment-complete.php
-// header("Location:".'betaling-complete.php', true, 303);
-
-*/
