@@ -4,7 +4,7 @@
     padding: 100px;
 }
 
-#info {
+#info2 {
     position: absolute;
     padding-left: 1456px;
     padding-top: 20px;
@@ -14,10 +14,39 @@
 }
 
 h6 {
-    padding-left: 166px;
-    font-size: 4em;
-    padding-top: 39px;
+    padding-left: 422px;
+    font-size: 3em;
+    padding-top: 34px;
     position: absolute;
     text-decoration: underline;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+#info {
+    position: absolute;
+    padding-left: 186px;
+    padding-top: 122px;
+}
+
+h5 {
+    font-size: 3.5em;
+    
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+li {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+#rechts {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
 }
