@@ -18,7 +18,7 @@ h6 {
     font-size: 3em;
     padding-top: 34px;
     position: absolute;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-transform: uppercase;
     color: white;
@@ -32,17 +32,22 @@ h6 {
 
 h5 {
     font-size: 3.5em;
-    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
 }
 
 p {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.6em;
+    /* font-weight: bold; */
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 li {
     font-size: 1.8em;
-    font-weight: bold;
+    /* font-weight: bold; */
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #rechts {
