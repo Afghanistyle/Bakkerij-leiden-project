@@ -35,34 +35,10 @@
         </header>
 
         <!-- content -->
-
-    <h6> Informatie </h6>
         
     <div class="product"> </div>
 
-    <div id="info">
-      <h5>Bakkerij Leiden</h5><br>
-      <p> Bij ons website heb je de keuze om verrassingspakketten te kopen. dat houdt in dat er verschillende<br>
-        soorten voedsel producten in één pakket (Verrassingspakket) samengevoegd. je kan tussen 3 verrassingspakketten<br>
-        kiezen:<br>
-        <li> Verrassingspakket Klein</li><br>
-        <li> Verrassingspakket Gemiddeld</li><br>
-        <li> Verrassingspakket Groot.</li><br><br></p>
-        <p>De mogelijke inhoud van producten in elk verrassingspakket kunnen het onderstaande zijn:<br>
-        <li>	Kleinbrood (bijvoorbeeld bolletjes, etc)</li><br>
-        <li>	Grootbrood (bijvoorbeeld hele broden) </li><br>
-        <li>	Koekjes</li><br>
-        <li>	Gebakjes</li><br>
-        <div id="rechts">
-        <li>	Cakes</li><br>
-        <li>	Chocolade & bonbons</li><br>
-        <li>	Marsepein</li><br>
-        <li>	Stukswerk (bijvoorbeeld gevulde koeken)</li><br>
-        </div>
- </p>
-    </div>
-
-    <div id="info2"> deze allergenen zullen mogelijk <br><br> voorkomen in de producten: </div>
+    <div id="info"> deze allergenen zullen mogelijk <br><br> voorkomen in de producten: </div>
         
     <div class="allergenen"><!-- hier komen foto's -->
     <img src="images/1.png" width="125px" height="125px"><img src="images/2.png" width="125px" height="125px"><img src="images/3.png" width="125px" height="125px">

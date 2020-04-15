@@ -62,7 +62,7 @@ td {
 <?php 
 $status="";
 //session_start();
-// Remove product from cart, check for the URL param "remove", this is the product id, make sure it's a number and check if it's in the cart
+// Remove the product from the shopping cart
 if (isset($_POST['action']) && $_POST['action']=="remove"){
 if(!empty($_SESSION["shopping_cart"])) {
 	foreach($_SESSION["shopping_cart"] as $key => $value) {
@@ -71,7 +71,6 @@ if(!empty($_SESSION["shopping_cart"])) {
 		$status = "<div class='box' style='color:white;'>
         Product is verwijderd uit winkelmand!</div>";
         }
-         // Remove the product from the shopping cart
 		if(empty($_SESSION["shopping_cart"]))
 		    unset($_SESSION["shopping_cart"]);
 		}		
@@ -86,6 +85,50 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
     }
   }
 }
+
+// Create some session variables for later use
+if (isset($_POST['checkout']) && isset($_SESSION['shopping_cart']) && !empty($_SESSION['shopping_cart'])) {
+  // First checks if product 1 contains anything, if not we give it a value
+  if ($_POST['product1']=="") $_POST['product1'] = "-";
+  // Checks if quantity 1 contains a value, if not we will give it an empty value
+  if ($_POST['quantity1']=="") $_POST['quantity1'] = "0";
+  // Puts the post value in a session to use in form.php (product 1 + quantity 1)
+  $_SESSION['product1'] = $_POST['product1'];
+  $_SESSION['quantity1'] = $_POST['quantity1'];
+
+  $_POST['product1'] = $_SESSION['product1'];
+  $_POST['quantity1'] = $_SESSION['quantity1'];
+
+  // First checks if product 2 contains anything, if not we give it a value
+  if ($_POST['product2']=="") $_POST['product2'] = "-";
+  // Checks if quantity 2 contains a value, if not we will give it an empty value
+  if ($_POST['quantity2']=="") $_POST['quantity2'] = "0";
+  // Puts the post value in a session to use in form.php (product 2 + quantity 2)
+  $_SESSION['product2'] = $_POST['product2'];
+  $_SESSION['quantity2'] = $_POST['quantity2'];
+
+  $_POST['product2'] = $_SESSION['product2'];
+  $_POST['quantity2'] = $_SESSION['quantity2'];
+
+  // First checks if product 3 contains anything, if not we give it a value
+  if ($_POST['product3']=="") $_POST['product3'] = "-";
+  // Checks if quantity 3 contains a value, if not we will give it an empty value
+  if ($_POST['quantity3']=="") $_POST['quantity3'] = "0";
+  // Puts the post value in a session to use in form.php (product 3 + quantity 3)
+  $_SESSION['product3'] = $_POST['product3'];
+  $_SESSION['quantity3'] = $_POST['quantity3'];
+
+  $_POST['product3'] = $_SESSION['product3'];
+  $_POST['quantity3'] = $_SESSION['quantity3'];
+
+  // Puts the totalprice value in a session to later use
+  $_SESSION['total_price'] = $_POST['total_price'];
+  $_POST['total_price'] = $_SESSION['total_price'];
+
+  header('Location: form.php');
+  exit;
+}
+
 ?>
 
 <body>
@@ -121,7 +164,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
         <div style="width:1170px; margin:auto;">
 
         <div class="cart">
-            <?php if(isset($_SESSION["shopping_cart"])){ $total_price=0 ; ?>
+            <?php if(isset($_SESSION["shopping_cart"])){ $total_price = 0.0; ?>
             <table class="table">
                 <tbody>
                     <tr class="100-head"></div>
@@ -133,7 +176,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                     </tr>
                     <?php foreach ($_SESSION["shopping_cart"] as $product){ ?>
                     <tr>
-                        <td><img src="images/tas.jpg"<?php echo $product["image"]; ?>' width="75" height="75" />
+                        <td><img src='<?php echo $product["image"]; ?>' width="75" height="75" />
                         </td>
                         <td>
                             <?php echo $product["name"]; ?>
@@ -148,7 +191,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                             <form method='post' action=''>
                                 <input type='hidden' name='desc' value="<?php echo $product["desc"]; ?>" />
                                 <input type='hidden' name='action' value="change" />
-                                <select name='quantity' class='quantity' onchange="this.form.submit()">
+                                <select name='quantity' class='quantity' onchange="this.form.submit() " >
                                     <option <?php if($product[ "quantity"]==1) echo "selected";?> value="1">1</option>
                                     <option <?php if($product[ "quantity"]==2) echo "selected";?> value="2">2</option>
                                     <option <?php if($product[ "quantity"]==3) echo "selected";?> value="3">3</option>
@@ -157,23 +200,30 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
                                 </select>
                             </form>
                         </td>
-                        <td>
-                            <?php echo "€".$product["price"]; ?>
+                      <td>
+                           <?php $price = $product["price"]; ?>
+                            &euro;<?=number_format($price,2)?>
                         </td>
                         <td>
-                            <?php echo "€".$product["price"]*$product["quantity"]; ?>
+                            <?php $subtotal = $product["price"]*$product["quantity"]; ?>
+                            &euro;<?=number_format($subtotal,2)?>
                         </td>
                         </tr>
                             <?php $total_price +=( $product["price"]*$product["quantity"]); } ?>
                         <tr>
                         <td colspan="5" align="right">
-                            <b>TOTAAL: <?php echo "€".$total_price; ?></b>
+                            <b>TOTAAL: &euro;<?=number_format($total_price,2)?>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
-            <a href="form.php" class="button">Uitchecken</a>
+             <form method='post' action=''>
+                <input type='hidden' name='checkout' value="<?php echo number_format($total_price,2)?>" />
+                <button type='submit' class='submit'>Checkout</button>
+             </form>
+
+            <a href="form.php" class="button" value="<?$total_price?>" name="checkout">Uitchecken</a>
             <a href="index.php" class="button">Verder winkelen</a>
 
             <div style="clear:both;"></div>

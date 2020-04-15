@@ -113,20 +113,19 @@ input[type=search] {
   <input class="form-input" type="customer_email" name="customer_email" maxlength="50" placeholder="" required />
 
   <!-- Input type hidden which sends the product ID. -->
-  <input type="hidden" name="product1" value="<?php echo $_SESSION['product1'] ?>">
-    <input type="hidden" name="product2" value="<?php echo $_SESSION['product2'] ?>">
-    <input type="hidden" name="product3" value="<?php echo $_SESSION['product3'] ?>">
+    <input type="hidden" name="product1" value="<?php echo $_SESSION['product1']?>">
+    <input type="hidden" name="product2" value="<?php echo $_SESSION['product2']?>">
+    <input type="hidden" name="product3" value="<?php echo $_SESSION['product3']?>">
     <!-- Input type hidden which sends the quantity of the product ID. -->
-    <input type="hidden" name="quantity1" value="<?php echo $_SESSION['quantity1'] ?>">
-    <input type="hidden" name="quantity2" value="<?php echo $_SESSION['quantity2'] ?>">
-    <input type="hidden" name="quantity3" value="<?php echo $_SESSION['quantity3'] ?>">
+    <input type="hidden" name="quantity1" value="<?php echo $_SESSION['quantity1']?>">
+    <input type="hidden" name="quantity2" value="<?php echo $_SESSION['quantity2']?>">
+    <input type="hidden" name="quantity3" value="<?php echo $_SESSION['quantity3']?>">
     
     <!-- Input type hidden which sends the current date. -->
     <input type="hidden" name="date" value="<?php echo date('Y-m-d'); ?>" readonly="readonly">
     <!-- Input type hidden for totalprice. -->
-  <input type="hidden" name="total_price" value="<?php echo $_SESSION['total_price'] ?>">
-
-  <input id='' class="btn" type="submit" name="next" value="Volgende" >
+    <input type="hidden" name="total_price" value="<?php echo $_SESSION['total_price']?>">
+   <input class="button" type="submit" name="submit" value="Verder">
 </form>
 
 <?php include('includes/footer.php');?>

@@ -48,28 +48,39 @@ try {
      */
 
     session_start();
+    $_SESSION['customer_name'] = $_POST['customer_name'];
+    $_POST['customer_name'] = $_SESSION['customer_name'];
 
-    if (isset($_SESSION['customer_name'])) {
-        $customer_name = $_POST['customer_name'];
-    }
+    $_SESSION['date'] = $_POST['date'];
+    $_POST['date'] = $_SESSION['date'];
 
-    if (isset($_SESSION['customer_email'])) {
-        $customer_email = $_POST['customer_email'];
-    }
+    $_SESSION['customer_email'] = $_POST['customer_email'];
+    $_POST['customer_email'] = $_SESSION['customer_email'];
 
-    if (isset($_SESSION['date'])) {
-        $date = $_POST['date'];
-    }
+    $total_price = $_POST['total_price'];
 
-    if (isset($_SESSION['total_price'])) {
-        $total_price = $_POST['total_price'];
-    }
+    // $total_price = "";
+    // if (isset($_SESSION['customer_name'])) {
+    //     $orders = $_POST['customer_name'];
+    // }
+
+    // if (isset($_SESSION['customer_email'])) {
+    //     $orders = $_POST['customer_email'];
+    // }
+
+    // if (isset($_SESSION['date'])) {
+    //     $orders = $_POST['date'];
+    // }
+
+    // if (isset($_SESSION['total_price'])) {
+    //     $orders = $_POST['total_price'];
+    // }
     
     $payment = $mollie->payments->create([
     "amount" =>  
     [
     "currency" => "EUR", 
-    "value" => "total_price"
+    "value" => "$total_price"
     ], 
     "method" => \Mollie\Api\Types\PaymentMethod::IDEAL, 
     "description" => "Order #{$orderId}", 
