@@ -42,7 +42,7 @@ body.loggedin {
 	background-color: #f3f4f7;
 }
 .content {
-	width: 1000px;
+	width: 690px;
 	margin: 0 auto;
 }
 .content h2 {
@@ -60,7 +60,7 @@ body.loggedin {
     font-size: 2vh;
     font-family: monospace;
 }
-}
+
 }
 .content > p table td, .content > div table td {
 	padding: 5px;
@@ -74,6 +74,4 @@ body.loggedin {
 	padding: 5px;
 	margin: 0 0 10px 0;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    style
-   }
+@media screen and (min-width: 320px) and (max-width: 480px) 
