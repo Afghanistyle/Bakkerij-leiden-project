@@ -58,9 +58,11 @@
         <li>	Chocolade & bonbons</li><br>
         <li>	Marsepein</li><br>
         <li>	Stukswerk (bijvoorbeeld gevulde koeken)</li><br>
+
         </div>
- </p>
+      </p> 
     </div>
+    <h4> Let op! tijdelijk alleen afhalen mogelijk. </h4>
 
     <div id="info2"> deze allergenen zullen mogelijk <br><br> voorkomen in de producten: </div>
         

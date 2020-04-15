@@ -110,7 +110,7 @@ input[type=search] {
   <div class="form-header">Naam & Achternaam</div>
   <input class="form-input" type="text" name="customer_name" maxlength="50" placeholder="" required />
   <div class="form-header">E-mail</div>
-  <input class="form-input" type="customer_email" name="customer_email" maxlength="50" placeholder="" required />
+  <input class="form-input" type="email" name="customer_email" maxlength="50" placeholder="" required />
 
   <!-- Input type hidden which sends the product ID. -->
     <input type="hidden" name="product1" value="<?php echo $_SESSION['product1'];?>">

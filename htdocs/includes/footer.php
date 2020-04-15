@@ -7,7 +7,7 @@
         <div class="grid_12">
          
           <!-- footer center -->
-          <div class="middle">S.Koek@mborijnland.nl <br> Ma t/m Vrij 9:00-16:30</div>
+          <div class="middle"><a href="mailto:S.Koek@mborijnland.nl">S.Koek@mborijnland.nl</a> <br> Zondag t/m Donderdag 9:00-16:30</div>
           <!-- footer left -->
           <div class="copyright"><span class="brand">BakkerijLeiden</span> &copy; <span id="copyright-year">2020</span> |
             <a href="admin/login.php">ADMIN</a> 
