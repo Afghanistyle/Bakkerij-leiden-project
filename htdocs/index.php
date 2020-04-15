@@ -24,7 +24,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
         )
     );
 
-   if (empty($_SESSION["shopping_cart"]))
+    if (empty($_SESSION["shopping_cart"]))
     {
         $_SESSION["shopping_cart"] = $cartArray;
         $status = "<div class='box' style='color:#cfd84a;'>Het artikel is toegevoegd aan winkelmand!</div>";  
@@ -67,7 +67,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
   <div class="row"></div>
     <div class="grid_12">
       <h1>
-        <a href="index.php">
+        <a>
           <img src="images/logo.png" alt="Logo alt">
           <img src="images/stripes.png" class="stripes" alt="Logo alt">
           </a>
@@ -77,8 +77,8 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
         
           <ul>
             <li>
-              <a href='index.php'>
-                <i class="fas fa-home"></i> Home
+              <a href='info.php'>
+              <i class="fas fa-info"></i> Informatie
               </a>
             </li>
             <li>
@@ -87,7 +87,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
               </a>
               
             </li>
-            <ul></ul>
+
           </div>
         </header>
        
@@ -104,13 +104,12 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                 <div class="gall_block">
                   <div class="maxheight">
                     <a href="images/bbig1.jpg" class="gall_item">
-                      <img src="images/page2_img1.jpg" alt="">
+                      <img src="images/tas.jpg" alt="">
                       </a>
                       <div class="gall_bot">
                       
                         <div class="text1">Verassingspakket (1)</div>
                                     Hier komt informatie over het product
-                                    
                                    
                           <?php if (!empty($_SESSION["shopping_cart"]))
                           {
@@ -118,13 +117,12 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                           <?php
                           }
                           $result = mysqli_query($con, "SELECT * FROM `products` where `id` = 1");
-                          
                           while ($row = mysqli_fetch_assoc($result))
                           {
                             echo "<div class='product_wrapper'>
                             <form method='post' action=''>
                             <input type='hidden' name='desc' value=" . $row['desc'] . " />
-                            <button type='submit' class='btn'>IN WINKELWAGEN €5.00</button>
+                            <button type='submit' class='btn'>IN WINKELMAND €5.00</button>
                             </form>
                             </div>";
                           } ?>
@@ -138,7 +136,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                     <div class="gall_block">
                       <div class="maxheight">
                         <a href="images/big3.jpg" class="gall_item">
-                          <img src="images/page2_img2.jpg" alt="">
+                          <img src="images/tas.jpg" alt="">
                           </a>
                           <div class="gall_bot">
                             <div class="text1">Verassingspakket (2)</div>
@@ -150,7 +148,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                             while($row=mysqli_fetch_assoc($result)){ echo "<div class='product_wrapper'>
                             <form method='post' action=''>
                             <input type='hidden' name='desc' value=".$row['desc']." />
-                            <button type='submit' class='btn'>IN WINKELWAGEN €7.50</button>
+                            <button type='submit' class='btn'>IN WINKELMAND €7.50</button>
                             </form>
                             </div>"; } ?>
 
@@ -163,7 +161,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                         <div class="gall_block">
                           <div class="maxheight">
                             <a href="images/bbig3.jpg" class="gall_item">
-                              <img src="images/page2_img3.jpg" alt="">
+                              <img src="images/tas.jpg" alt="">
                               </a>
                               <div class="gall_bot">
                                 <div class="text1">Verassingspakket (3)</div>
@@ -174,7 +172,7 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                                   while($row=mysqli_fetch_assoc($result)){ echo "<div class='product_wrapper'>
                                   <form method='post' action=''>
                                   <input type='hidden' name='desc' value=".$row['desc']." />
-                                  <button type='submit' class='btn'>IN WINKELWAGEN €10.00</button>
+                                  <button type='submit' class='btn'>IN WINKELMAND €10.00</button>
                                   </form>
                                   </div>"; } ?>
 

@@ -104,9 +104,7 @@ input[type=search] {
             <ul></ul>
           </div>
         </header>
-<?php 
-echo '<pre>'. var_dump($_SESSION).'</pre>';
-echo $_SESSION['myTotal'];?>
+
 <form action="./mollie/payments.php" method="post">
   <div id="form-title">Contact Formulier</div>
   <div class="form-header">Naam & Achternaam</div>

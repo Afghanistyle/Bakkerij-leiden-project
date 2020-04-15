@@ -176,7 +176,7 @@ if (isset($_POST['checkout']) && isset($_SESSION['shopping_cart']) && !empty($_S
                     </tr>
                     <?php foreach ($_SESSION["shopping_cart"] as $product){ ?>
                     <tr>
-                        <td><img src='<?php echo $product["image"]; ?>' width="75" height="75" />
+                        <td><img src="images/tas.jpg"<?php echo $product["image"]; ?>' width="75" height="75" />
                         </td>
                         <td>
                             <?php echo $product["name"]; ?>
@@ -218,10 +218,7 @@ if (isset($_POST['checkout']) && isset($_SESSION['shopping_cart']) && !empty($_S
                 </tbody>
             </table>
 
-             <form method='post' action=''>
-                <input type='hidden' name='checkout' value="<?php echo number_format($total_price,2)?>" />
-                <button type='submit' class='submit'>Checkout</button>
-             </form>
+
 
             <a href="form.php" class="button" value="<?$total_price?>" name="checkout">Uitchecken</a>
             <a href="index.php" class="button">Verder winkelen</a>
