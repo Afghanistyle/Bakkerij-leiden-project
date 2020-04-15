@@ -12,7 +12,7 @@ $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_
 if($con === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-$sql = "SELECT * FROM customers";
+$sql = "SELECT * FROM orders";
 if($result = mysqli_query($con, $sql)){
   if(mysqli_num_rows($result) > -1){
 ?>
@@ -73,7 +73,7 @@ if($result = mysqli_query($con, $sql)){
           <td><?=$row['quantity1']?></td>
         
           <td><?=$row['date']?></td>
-          <td><?=$currency, $row['totalprice']?></td>
+          <td><?=$currency, $row['total_price']?></td>
         </tr>
       </tbody>
         <?php 
