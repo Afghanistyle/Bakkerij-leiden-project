@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 04 mrt 2020 om 15:05
--- Serverversie: 10.4.8-MariaDB
--- PHP-versie: 7.3.11
+-- Gegenereerd op: 15 apr 2020 om 19:21
+-- Serverversie: 10.4.11-MariaDB
+-- PHP-versie: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -50,11 +49,16 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
 
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `order_number` int(255) NOT NULL,
-  `suprise_package_id` int(255) NOT NULL,
-  `email` varchar(255) NOT NULL
+  `customer_name` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `date` date NOT NULL,
+  `product1` varchar(250) NOT NULL,
+  `quantity1` int(11) NOT NULL,
+  `product2` varchar(250) NOT NULL,
+  `quantity2` int(11) NOT NULL,
+  `product3` varchar(250) NOT NULL,
+  `quantity3` int(11) NOT NULL,
+  `total_price` decimal(11,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -64,20 +68,47 @@ CREATE TABLE `orders` (
 --
 
 CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `description` text NOT NULL,
-  `price` decimal(5,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id` int(10) NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `desc` varchar(100) NOT NULL,
+  `price` decimal(11,2) NOT NULL,
+  `image` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `description`, `price`) VALUES
-(1, 'Suprise Package SMALL', 'verassingspakket met bakkerij producten', '5.00'),
-(2, 'Suprise Package MEDIUM', 'verassingspakket met bakkerij producten', '7.50'),
-(3, 'Suprise Package LARGE', 'verassingspakket met bakkerij producten', '10.00');
+INSERT INTO `products` (`id`, `name`, `desc`, `price`, `image`) VALUES
+(1, 'Verrassingspakket 1', 'veras1', '4.99', 'images/package1.png'),
+(2, 'Verrassingspakket 2', 'veras2', '7.49', 'images/package2.png\r\n'),
+(3, 'Verrassingspakket 3', 'veras3', '9.99', 'images/package3.png\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `shop`
+--
+
+CREATE TABLE `shop` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `desc` text NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `img` text NOT NULL,
+  `date_added` datetime NOT NULL DEFAULT current_timestamp(),
+  `product_desc` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `shop`
+--
+
+INSERT INTO `shop` (`id`, `name`, `desc`, `price`, `quantity`, `img`, `date_added`, `product_desc`) VALUES
+(1, 'Klein', '', '4.99', 0, '', '2020-02-20 23:59:57', 'Een klein broodje, smaakt lekker en is goedkoop!'),
+(2, 'Medium', '', '7.49', 0, '', '2020-02-20 23:59:58', 'Middelmatig brood, de smaak is heerlijk en het is meest verkocht!'),
+(3, 'Groot', '', '9.99', 0, '', '2020-02-20 23:59:59', 'Qua inhoud is deze het meest en het beste voor jouw centen!');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -102,6 +133,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexen voor tabel `shop`
+--
+ALTER TABLE `shop`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
@@ -121,6 +158,12 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT voor een tabel `products`
 --
 ALTER TABLE `products`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT voor een tabel `shop`
+--
+ALTER TABLE `shop`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
