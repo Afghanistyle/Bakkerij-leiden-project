@@ -11,11 +11,11 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Insert query with contact information + purchase information
-    $sql = "INSERT INTO customers (customer_name,customer_email, date, 
-    product1, quantity1, product2, quantity2, product3, quantity3, totalprice) 
-    VALUES ('".$_SESSION['name']."','".$_SESSION['email']."', '".$_SESSION['date']."', '".$_SESSION['product1']."', 
+    $sql = "INSERT INTO orders (customer_name,customer_email, date, 
+    product1, quantity1, product2, quantity2, product3, quantity3, total_price) 
+    VALUES ('".$_SESSION['customer_name']."','".$_SESSION['customer_email']."', '".$_SESSION['date']."', '".$_SESSION['product1']."', 
     '".$_SESSION['quantity1']."', '".$_SESSION['product2']."', '".$_SESSION['quantity2']."', '".$_SESSION['product3']."', 
-    '".$_SESSION['quantity3']."', '".$_SESSION['totalprice']."')";
+    '".$_SESSION['quantity3']."', '".$_SESSION['total_price']."')";
 
     $stmt = $conn->prepare($sql);
     $stmt->execute();

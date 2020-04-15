@@ -84,7 +84,7 @@ try {
     ], 
     "method" => \Mollie\Api\Types\PaymentMethod::IDEAL, 
     "description" => "Order #{$orderId}", 
-    "redirectUrl" => "{$protocol}://{$hostname}/bakkerij/completed.php", 
+    "redirectUrl" => "{$protocol}://{$hostname}/Bakkerij-Leiden/bakkerij-leiden/htdocs/admin/payments-success.php", 
     "webhookUrl" => "{$protocol}://{$hostname}{$path}/payments/webhook.php", 
     "metadata" => ["order_id" => $orderId], 
     "issuer" => !empty($_POST["issuer"]) ? $_POST["issuer"] : null]);
