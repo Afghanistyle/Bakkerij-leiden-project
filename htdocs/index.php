@@ -108,8 +108,8 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                       </a>
                       <div class="gall_bot">
                       
-                        <div class="text1">Verassingspakket (1)</div>
-                                    Hier komt informatie over het product
+                        <div class="text1">Verassingspakket: Normaal</div>
+                         Voor meer informatie over de verrassinspakketten, ga naar de <a href="info.php">informatie</a> pagina
                                    
                           <?php if (!empty($_SESSION["shopping_cart"]))
                           {
@@ -139,8 +139,8 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                           <img src="images/tas.jpg" alt="">
                           </a>
                           <div class="gall_bot">
-                            <div class="text1">Verassingspakket (2)</div>
-                            Hier komt informatie over het product
+                            <div class="text1">Verassingspakket: Gemiddeld</div>
+                            Voor meer informatie over de verrassinspakketten, ga naar de <a href="info.php">informatie</a> pagina
 
                             <?php if(!empty($_SESSION[ "shopping_cart"])) { $cart_count=count(array_keys($_SESSION[ "shopping_cart"])); ?>
                        
@@ -164,8 +164,8 @@ if (isset($_POST['desc']) && $_POST['desc'] != "")
                               <img src="images/tas.jpg" alt="">
                               </a>
                               <div class="gall_bot">
-                                <div class="text1">Verassingspakket (3)</div>
-                                    Hier komt informatie over het product
+                                <div class="text1">Verassingspakket: Groot</div>
+                                Voor meer informatie over de verrassinspakketten, ga naar de <a href="info.php">informatie</a> pagina
                                     
                                   <?php if(!empty($_SESSION[ "shopping_cart"])) { $cart_count=count(array_keys($_SESSION[ "shopping_cart"])); ?>
                                   <?php } $result=mysqli_query($con, "SELECT * FROM `products` where `id` = 3"); 
