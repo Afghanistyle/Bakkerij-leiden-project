@@ -45,7 +45,7 @@
       <p> Bij ons website heb je de keuze om verrassingspakketten te kopen. dat houdt in dat er verschillende<br>
         soorten voedsel producten in één pakket (Verrassingspakket) samengevoegd. je kan tussen 3 verrassingspakketten<br>
         kiezen:<br>
-        <li> Verrassingspakket Klein</li><br>
+        <li> Verrassingspakket Normaal</li><br>
         <li> Verrassingspakket Gemiddeld</li><br>
         <li> Verrassingspakket Groot.</li><br><br></p>
         <p>De mogelijke inhoud van producten in elk verrassingspakket kunnen het onderstaande zijn:<br>
