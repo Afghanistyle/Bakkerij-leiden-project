@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 15 apr 2020 om 19:21
--- Serverversie: 10.4.11-MariaDB
--- PHP-versie: 7.4.4
+-- Gegenereerd op: 15 apr 2020 om 21:30
+-- Serverversie: 10.4.8-MariaDB
+-- PHP-versie: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -50,7 +51,7 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `customer_name` varchar(250) NOT NULL,
-  `email` varchar(250) NOT NULL,
+  `customer_email` varchar(250) NOT NULL,
   `date` date NOT NULL,
   `product1` varchar(250) NOT NULL,
   `quantity1` int(11) NOT NULL,
@@ -60,6 +61,17 @@ CREATE TABLE `orders` (
   `quantity3` int(11) NOT NULL,
   `total_price` decimal(11,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `orders`
+--
+
+INSERT INTO `orders` (`id`, `customer_name`, `customer_email`, `date`, `product1`, `quantity1`, `product2`, `quantity2`, `product3`, `quantity3`, `total_price`) VALUES
+(1, 'test', 'test@email.com', '2020-04-04', 'normaal Verrassingspakket', 4, 'Gemiddeld Verrassingspakket', 9, 'groot Verrassingspakket', 8, '167.29'),
+(2, 'test', 'test@email.com', '2020-04-04', 'Normaal Verrassingspakket', 2, 'Gemiddeld Verrassingspakket', 1, '', 0, '17.47'),
+(3, 'admin', 'admin@email.com', '2020-04-04', '', 0, '', 0, 'Groot Verrassingspakket', 1, '9.99'),
+(4, 'testie', '6009495@mborijnland.nl', '2020-04-04', 'Normaal Verrassingspakket', 9, 'Gemiddeld Verrassingspakket', 7, 'groot Verrassingspakket', 8, '177.26'),
+(5, 'bot', 'bot@email', '2020-04-04', 'Normaal Verrassingspakket', 2, '', 0, '', 0, '9.98');
 
 -- --------------------------------------------------------
 
@@ -106,9 +118,9 @@ CREATE TABLE `shop` (
 --
 
 INSERT INTO `shop` (`id`, `name`, `desc`, `price`, `quantity`, `img`, `date_added`, `product_desc`) VALUES
-(1, 'Klein', '', '4.99', 0, '', '2020-02-20 23:59:57', 'Een klein broodje, smaakt lekker en is goedkoop!'),
-(2, 'Medium', '', '7.49', 0, '', '2020-02-20 23:59:58', 'Middelmatig brood, de smaak is heerlijk en het is meest verkocht!'),
-(3, 'Groot', '', '9.99', 0, '', '2020-02-20 23:59:59', 'Qua inhoud is deze het meest en het beste voor jouw centen!');
+(1, 'Normaal', '', '4.99', 3, '', '2020-02-20 23:59:57', 'Een Kleine verrassingspakket!'),
+(2, 'Gemiddeld', '', '7.49', 4, '', '2020-02-20 23:59:58', 'Een Gemiddelde verrassingspakket!'),
+(3, 'Groot', '', '9.99', 4, '', '2020-02-20 23:59:59', 'Een grote verrassingspakket!');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -152,7 +164,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT voor een tabel `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT voor een tabel `products`

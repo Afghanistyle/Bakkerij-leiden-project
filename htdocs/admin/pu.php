@@ -6,11 +6,12 @@
     <link href="../css/incorrect.css" rel="stylesheet" type="text/css">
     <title>wachtwoord</title>
 </head>
-<body>
+<body> <!-- begin body -->
     <div id="container">
     <div id="blok">  Gebruikersnaam of Wachtwoord </div>
     <div id="onj"> Incorrect </div>
     <a href="login.php"><div id="terug"> Terug </div></a>
 </div>
-</body>
+</body><!-- eind body -->
+
 </html>
