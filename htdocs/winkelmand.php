@@ -123,7 +123,7 @@ if (isset($_POST['checkout']) && isset($_SESSION['shopping_cart']) && !empty($_S
 
   // Puts the totalprice value in a session to later use
   $_SESSION['total_price'] = $_POST['total_price'];
-  $_POST['total_price'] = $_SESSION['total_price'];
+  
 
   header('Location: form.php');
   exit;
@@ -212,7 +212,7 @@ if (isset($_POST['checkout']) && isset($_SESSION['shopping_cart']) && !empty($_S
                             <?php $total_price +=( $product["price"]*$product["quantity"]); } ?>
                         <tr>
                         <td colspan="5" align="right">
-                            <b>TOTAAL: &euro;<?=number_format($total_price,2)?>
+                            <b>TOTAAL: &euro;<?=number_format($total_price,2); $_SESSION['myTotal'] = number_format($total_price,2);?>
                         </td>
                     </tr>
                 </tbody>
